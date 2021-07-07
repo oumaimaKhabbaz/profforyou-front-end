@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  profs: Array<string>= ["oumaima", "issam", "germany", "fourThouasands", "git"]
+  profs: Array<string>= ["oumaima", "issam", "germany", "fourThouasands", "git", "boring"]
 
   constructor() { }
 
