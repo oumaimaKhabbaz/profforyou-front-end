@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
+import { SearchService } from 'src/app/shared/services/search.service';
+import { ProfSearch } from 'src/app/shared/model/profSearch';
 
 
 @Component({
@@ -11,22 +13,15 @@ import { FormControl } from '@angular/forms';
 export class SearchformComponent implements OnInit {
 
   subject= new FormControl('');
+  profs: Array<ProfSearch> = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private searchService: SearchService) { }
    
   ngOnInit(): void {
+
   }
 
-  search() {
-    console.log("button is clicked")
-    return this.http.get<any>("http://localhost:8080/search?subject="+this.subject.value)
-      .subscribe({
-        next: data => {
-
-        },
-        error: error => {
-          console.error('There was an error!', error);
-        }
-      });
-}
+   search(){ // defining service layers RestAPI and injected in component
+   this.profs = this.searchService.GetSearchResult(this.subject.value);
+   }  
 }

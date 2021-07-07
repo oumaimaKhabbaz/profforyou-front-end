@@ -3,18 +3,18 @@
         <div class="prof-card">
             <div class="prof-image">
                 <img src="">
-                <h3>profName: {{prof}}</h3> // 
-                <h5>city & teachingMethod</h5>
+                <h3>profName: {{prof.name}}</h3> 
+                <h5>{{prof.city}} & {{prof.teachingMethod}}</h5>
             </div>
             <div class="prof-details">
                 <div class="prof-review">
                     <span> starIcon</span>
-                    <p> nbrOfReviews</p>
+                    <p> {{prof.nbrOfReviews}}</p>
                 </div>
                 <div class="prof-description">
-                    <p>profDescription</p>
+                    <p>{{prof.profDescription}}</p>
                     <div class="prof-prices">
-                        <p>our price</p>
+                        <p>our price</p> <!--toDo-->
                         <p>1st lesson free</p>
                     </div>
                 </div>
