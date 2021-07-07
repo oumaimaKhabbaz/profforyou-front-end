@@ -1,0 +1,12 @@
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Sign-in</h2>
+
+    <form class="login-container">
+
+        <p><input [formControl]="email" type="email" placeholder="Email"></p>
+        <p><input [formControl]="password" type="password" placeholder="Password"></p>
+        <p><input type="submit" (click)="createUser()" value="Sign-in"></p>
+    </form>
+</div>

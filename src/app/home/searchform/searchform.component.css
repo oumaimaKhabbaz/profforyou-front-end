@@ -1,0 +1,6 @@
+.search input[type="button"] {
+    background: #FF5757;
+box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+
+}

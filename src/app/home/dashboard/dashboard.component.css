@@ -1,0 +1,773 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+
+.screen * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+/* screen - header */
+
+.header {
+    background-color: transparent;
+    height: 945px;
+    mix-blend-mode: normal;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  .header .header-cta {
+    background-color: #ff5757;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #00000040;
+    cursor: pointer;
+    height: 54px;
+    left: 559px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 533px;
+    width: 164px;
+  }
+  .header .header-cta-text {
+    background-color: transparent;
+    height: auto;
+    left: 17px;
+    letter-spacing: 0px;
+    line-height: 27.6px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 13px;
+    white-space: nowrap;
+    width: auto;
+  }
+  .header .header-logo {
+    background-color: transparent;
+    color: transparent;
+    font-family: var(--font-family-ubuntu);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 174px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 33px;
+    width: auto;
+  }
+  .header .header-nav-item-1-text {
+    background-color: transparent;
+    height: auto;
+    left: 10px;
+    letter-spacing: 0px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+  }
+  .header .header-nav-item-1 {
+    background-color: transparent;
+    height: 48px;
+    left: 457px;
+    position: absolute;
+    top: 5px;
+    width: 86px;
+  }
+  .header .header-nav-item-2-text {
+    background-color: transparent;
+    height: auto;
+    left: 10px;
+    letter-spacing: 0px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+  }
+  .header .header-nav-item-2 {
+    background-color: transparent;
+    height: 48px;
+    left: 349px;
+    position: absolute;
+    top: 5px;
+    width: 103px;
+  }
+  .header .header-nav-item-3-text {
+    background-color: transparent;
+    height: auto;
+    left: 10px;
+    letter-spacing: 0px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+  }
+  .header .header-nav-item-3 {
+    background-color: transparent;
+    height: 48px;
+    left: 222px;
+    position: absolute;
+    top: 5px;
+    width: 122px;
+  }
+  .header .header-nav-item-4-text {
+    background-color: transparent;
+    height: auto;
+    left: 10px;
+    letter-spacing: 0px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+  }
+  .header .header-nav-item-4 {
+    background-color: transparent;
+    height: 48px;
+    left: 95px;
+    position: absolute;
+    top: 5px;
+    width: 121px;
+  }
+  .header .header-nav-item-5-text {
+    background-color: transparent;
+    height: auto;
+    left: 10px;
+    letter-spacing: 0px;
+    line-height: normal;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    width: auto;
+  }
+  .header .header-nav-item-5 {
+    background-color: transparent;
+    height: 48px;
+    left: 0px;
+    position: absolute;
+    top: 5px;
+    width: 90px;
+  }
+  .header .header-nav-menu {
+    background-color: transparent;
+    height: 58px;
+    left: 723px;
+    overflow: hidden;
+    position: absolute;
+    top: 23px;
+    width: 543px;
+  }
+  .header .header-search-bar {
+    background-color: #fdfcfc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #00000040;
+    height: 54px;
+    left: 174px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 533px;
+    width: 355px;
+  }
+  .header .header-search-bar-placeholder {
+    background-color: transparent;
+    border: 0;
+    color: #929294;
+    font-family: var(--font-family-ubuntu);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+    height: 28px;
+    left: 94px;
+    letter-spacing: 0px;
+    line-height: 27.6px;
+    mix-blend-mode: normal;
+    padding: 0;
+    position: absolute;
+    resize: none;
+    text-align: left;
+    top: 13px;
+    white-space: nowrap;
+    width: 218px;
+  }
+  .header .header-search-bar-placeholder::placeholder {
+    color: #92929499;
+  }
+  .header .header-search-bar-search-icon {
+    background-color: transparent;
+    height: 26px;
+    left: 45px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 14px;
+    width: 22px;
+  }
+  .header .header-stars {
+    background-color: transparent;
+    height: 48px;
+    left: 509px;
+    overflow: hidden;
+    position: absolute;
+    top: 741px;
+    width: 188px;
+  }
+  .header .header-stars-star-1 {
+    background-color: transparent;
+    height: 32px;
+    left: 134px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 32px;
+  }
+  .header .header-stars-star-2 {
+    background-color: transparent;
+    height: 32px;
+    left: 106px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 32px;
+  }
+  .header .header-stars-star-3 {
+    background-color: transparent;
+    height: 32px;
+    left: 78px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 32px;
+  }
+  .header .header-stars-star-4 {
+    background-color: transparent;
+    height: 32px;
+    left: 50px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 32px;
+  }
+  .header .header-stars-star-5 {
+    background-color: transparent;
+    height: 32px;
+    left: 22px;
+    mix-blend-mode: normal;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 32px;
+  }
+  .header .header-sub-heading {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-ubuntu);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 15px;
+    height: auto;
+    left: 174px;
+    letter-spacing: 0px;
+    line-height: 32.2px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 435px;
+    width: 368px;
+  }
+  .header .header-title {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-ubuntu);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 168px;
+    letter-spacing: 0px;
+    line-height: 55px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 235px;
+    width: 465px;
+  }
+  .header .profforyou-hero-video-1 {
+    background-color: transparent;
+    height: 945px;
+    left: 0px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+  }
+  .header .span0 {
+    color: #ff5757;
+    font-style: normal;
+  }
+  .header .span1 {
+    color: var(--white);
+    font-style: normal;
+  }
+  .header .trusted-by-over-1000-students {
+    background-color: transparent;
+    height: auto;
+    left: 174px;
+    letter-spacing: 0px;
+    line-height: 27.6px;
+    mix-blend-mode: normal;
+    position: absolute;
+    text-align: left;
+    top: 751px;
+    white-space: nowrap;
+    width: 368px;
+  }
+  .header .vector-2 {
+    background-color: transparent;
+    height: 30px;
+    left: 1px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+  .header .vector-5 {
+    background-color: transparent;
+    height: 30px;
+    left: 1px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+  .header .vector-1 {
+    background-color: transparent;
+    height: 30px;
+    left: 1px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+  .header .vector-4 {
+    background-color: transparent;
+    height: 30px;
+    left: 1px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+  .header .vector-3 {
+    background-color: transparent;
+    height: 30px;
+    left: 1px;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 1px;
+    width: 30px;
+  }
+
+  :root {
+    --white: #ffffff;
+    --font-size-l: 28px;
+    --font-size-m: 24px;
+    --font-size-xl: 32px;
+    --font-size-xxl: 55px;
+  
+    --font-family-ubuntu: "Ubuntu", Helvetica;
+  }
+  
+  .ubuntu-normal-white-24px {
+    color: var(--white);
+    font-family: var(--font-family-ubuntu);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+* {
+  box-sizing: border-box;
+}
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.screen * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+/* screen - component-1 */
+
+.component-1 {
+  background-color: transparent;
+  height: 846px;
+  mix-blend-mode: normal;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.component-1 .asset-1 {
+  background-color: transparent;
+  height: 423px;
+  left: 168px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: absolute;
+  top: 227px;
+  width: 447px;
+}
+.component-1 .asset-2 {
+  background-color: transparent;
+  height: 423px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 447px;
+}
+
+.component-1 .explore-more-3 {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: var(--font-family-ubuntu);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 36px;
+  letter-spacing: 0px;
+  line-height: 27.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 13px;
+  white-space: nowrap;
+  width: auto;
+}
+.component-1 .explore-more-2 {
+  background-color: #ff5757;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #00000040;
+  height: 54px;
+  left: 841px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 509px;
+  width: 218px;
+}
+.component-1 .our-teaching-guidance {
+  background-color: transparent;
+  color: #000000;
+  font-family: var(--font-family-ubuntu);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 841px;
+  letter-spacing: 0px;
+  line-height: 27.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 421px;
+  width: 329px;
+}
+.component-1 .explore-more-1 {
+  background-color: #f6f6f6;
+  height: 846px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.component-1 .title-1 {
+  background-color: transparent;
+  color: #000000;
+  font-family: var(--font-family-ubuntu);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 841px;
+  letter-spacing: 0px;
+  line-height: 45px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 258px;
+  width: 389px;
+}
+
+:root {
+  --font-size-l: 45px;
+  --font-size-m: 24px;
+
+  --font-family-ubuntu: "Ubuntu", Helvetica;
+}
+
+
+.component-1 {
+  background-color: transparent;
+  height: 856px;
+  mix-blend-mode: normal;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.component-1 .frame-17 {
+  background-color: transparent;
+  height: 122px;
+  left: 445px;
+  position: absolute;
+  top: 639px;
+  width: 511px;
+}
+.component-1 .section-3 {
+  background-color: #f6f6f6;
+  height: 856px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.component-1 .section-3-heading {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 365px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 134px;
+  width: 707px;
+}
+.component-1 .section-3-step-1 {
+  background-color: transparent;
+  height: 122px;
+  left: 433px;
+  position: absolute;
+  top: 347px;
+  width: 512px;
+}
+.component-1 .section-3-step-1-circle {
+  background-color: transparent;
+  height: 152px;
+  left: -13px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -13px;
+  width: 152px;
+}
+.component-1 .section-3-step-1-icon {
+  background-color: transparent;
+  height: 72px;
+  left: 25px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 72px;
+}
+.component-1 .section-3-step-1-image {
+  background-color: transparent;
+  height: 122px;
+  left: 12px;
+  position: absolute;
+  top: 0px;
+  width: 122px;
+}
+.component-1 .section-3-step-1-text {
+  background-color: transparent;
+  height: auto;
+  left: 181px;
+  letter-spacing: 0px;
+  line-height: 32.2px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 333px;
+}
+.component-1 .section-3-step-2 {
+  background-color: transparent;
+  height: 122px;
+  left: 445px;
+  position: absolute;
+  top: 493px;
+  width: 518px;
+}
+.component-1 .section-3-step-2-icon {
+  background-color: transparent;
+  height: 72px;
+  left: 25px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 72px;
+}
+.component-1 .section-3-step-2-image {
+  background-color: transparent;
+  height: 122px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 122px;
+}
+.component-1 .section-3-step-2-text {
+  background-color: transparent;
+  height: auto;
+  left: 173px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 45px;
+  width: auto;
+}
+.component-1 .section-3-step-3-circle {
+  background-color: transparent;
+  height: 152px;
+  left: -13px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -13px;
+  width: 152px;
+}
+.component-1 .section-3-step-3-icon {
+  background-color: transparent;
+  height: 72px;
+  left: 25px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 72px;
+}
+.component-1 .section-3-step-3-image {
+  background-color: transparent;
+  height: 122px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 122px;
+}
+.component-1 .section-3-step-3-text {
+  background-color: transparent;
+  height: auto;
+  left: 177px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 336px;
+}
+.component-1 .section-3-step-circle {
+  background-color: transparent;
+  height: 152px;
+  left: -13px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -13px;
+  width: 152px;
+}
+
+
+:root {
+  --black: #000000;
+  --font-size-l: 45px;
+  --font-size-m: 28px;
+
+  --font-family-roboto: "Roboto", Helvetica;
+  --font-family-ubuntu: "Ubuntu", Helvetica;
+}
+
+.ubuntu-normal-black-28px {
+  color: var(--black);
+  font-family: var(--font-family-ubuntu);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}

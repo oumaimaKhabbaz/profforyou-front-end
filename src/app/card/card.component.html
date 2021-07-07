@@ -1,0 +1,24 @@
+<ul>
+    <li *ngFor="let prof of profs"> <!--defining a variable called prof-->
+        <div class="prof-card">
+            <div class="prof-image">
+                <img src="">
+                <h3>profName: {{prof}}</h3> // 
+                <h5>city & teachingMethod</h5>
+            </div>
+            <div class="prof-details">
+                <div class="prof-review">
+                    <span> starIcon</span>
+                    <p> nbrOfReviews</p>
+                </div>
+                <div class="prof-description">
+                    <p>profDescription</p>
+                    <div class="prof-prices">
+                        <p>our price</p>
+                        <p>1st lesson free</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
