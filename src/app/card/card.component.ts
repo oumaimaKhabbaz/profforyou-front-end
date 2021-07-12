@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProfSearch } from '../shared/model/profSearch';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-    @Input() profs: Array<string> = [];
+    @Input() profs: Array<ProfSearch> = [];
 
 
   constructor() { }

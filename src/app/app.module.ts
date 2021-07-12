@@ -14,6 +14,7 @@ import { DonationComponent } from './donation/donation.component';
 import { SearchformComponent } from './home/searchform/searchform.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     DonationComponent,
     SearchformComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    ForgotPasswordComponent
 
 
   ],

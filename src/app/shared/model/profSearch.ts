@@ -1,14 +1,15 @@
 import { LocationChangeEvent } from "@angular/common";
+import { HttpClient } from '@angular/common/http';
 
 export class ProfSearch{
-    name: string;
-    city: string;
-    teachingMethod: string;
-    rate: long;
-    description: string;
-    courseCost: long;
+    name : string= "O";
+    city: string = "O";
+    teachingMethod: string = "O";
+    rate =12 ;
+    nbrOfReviews: number= 0;
+    profDescription: string= "O";
+    courseCost = 0 ;
 
-    constructor (){}
+    constructor (private http: HttpClient){}
 
-    
 } 

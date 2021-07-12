@@ -7,6 +7,7 @@ import { HelpComponent } from './help/help.component';
 import { SearchformComponent } from './home/searchform/searchform.component';
 import { DonationComponent } from './donation/donation.component';
 import { CardComponent } from './card/card.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,11 @@ const routes: Routes = [
   {
     path: 'card',
     component: CardComponent
+  },
+
+  {
+    path: 'forgotPassword',
+    component: ForgotPasswordComponent
   }
 
   
