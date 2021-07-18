@@ -47,6 +47,9 @@ handleError(method: string, message: string) {
   return Observable.throw(message);
   ;
 }
+forgotPassword(){
+
+}
   }
 
   

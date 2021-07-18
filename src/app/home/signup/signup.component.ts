@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { FormControl,Validators } from '@angular/forms';
+import { FormControl,FormGroup,Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import {catchError, map, tap} from 'rxjs/operators';
@@ -13,11 +13,16 @@ import {catchError, map, tap} from 'rxjs/operators';
 export class SignupComponent implements OnInit {
 
   email = new FormControl('',[Validators.required,]);// dataBinding // one way binding
-  password = new FormControl('');
+  password= new FormControl('');
   firstName = new FormControl('');
-  lastName = new FormControl('');
+  lastName =new FormControl('');
 
-
+  form = new FormGroup({
+   email: this.email,
+   password: this.password,
+   firstname: this.firstName,
+   lastName: this.lastName
+  })
   constructor(private http: HttpClient) { } 
 
 
@@ -53,6 +58,6 @@ export class SignupComponent implements OnInit {
   handleError(method: string, message: string) {
     console.log(method + message)
     return Observable.throw(message);
-    ;
+    
   }
 }

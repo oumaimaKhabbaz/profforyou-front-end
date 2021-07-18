@@ -62,8 +62,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
-//import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { HttpClientModule } from '@angular/common/http';
     ForgotPasswordComponent,
     MessagesComponent,
     OpenCloseComponent,
-    PaymentComponent
+    PaymentComponent,
+    MatToolbarModule
 
 
   ],
@@ -103,7 +105,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    //FlexLayoutModule
+    FlexLayoutModule,
+    
   ],
     exports:[
       A11yModule,
