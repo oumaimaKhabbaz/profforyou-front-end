@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'
 import { SignupComponent } from './home/signup/signup.component';
 import { SigninComponent } from './home/signin/signin.component';
@@ -17,6 +16,7 @@ import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { TutorsComponent } from './home/tutors/tutors.component';
+import { MessagesComponent } from './messages/messages.component'
 
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -78,12 +78,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TutorsComponent,
     FooterComponent,
     ForgotPasswordComponent,
-    NavbarComponent
+    NavbarComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
     MatInputModule,

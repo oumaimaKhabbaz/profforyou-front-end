@@ -5,9 +5,9 @@
     <h2 class="login-header">Sign-up</h2>
   
     <form class="login-container">
-        <p><input [formControl]="firstName" type="firstName" placeholder="firstName"></p> 
+        <p><input [formControl]="firstName" type="firstName" placeholder="FirstName"></p> 
 
-        <p><input [formControl]="lastName" type="lastName" placeholder="lastName"></p> 
+        <p><input [formControl]="lastName" type="lastName" placeholder="LastName"></p> 
       <p><input [formControl]="email" type="email" required placeholder="Email"></p> 
       <p><input [formControl]="password" type="password" placeholder="Password"></p>
       <p><input type="submit" (click) =  "createUser()" value="Sign-up"></p>

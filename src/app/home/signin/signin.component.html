@@ -1,3 +1,4 @@
+
 <div class="login">
     <div class="login-triangle"></div>
 
@@ -5,11 +6,16 @@
 
     <form class="login-container">
 
-        <p><input [formControl]="email" type="email" placeholder="Email"></p>
+        <p><input [formControl]="email" type="email" placeholder="Email" required></p>
+        <div [hidden]="email.valid || email.pristine" class ="alert alert-danger">
+            Email is required
+        </div>
+        <!--<span *ngIf="!login-container.get('email').valid && login-container.get('email').touched "
+            class="help-block">Please enter a valid email </span> -->
 
         <p><input [formControl]="password" type="password" placeholder="Password"></p>
 
-        <p><button (click)="forgotPasword()">forgot password ?</button></p>
+        <p><button (click)="forgotPassword()">forgot password ?</button></p>
 
         <p><input type="submit" (click)="createUser()" value="Sign-in"></p>
 

@@ -23,7 +23,7 @@ export class SigninComponent implements OnInit {
     public dialogRef: MatDialogRef<SigninComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
-  
+
 
   ngOnInit(): void {
   }
@@ -51,7 +51,7 @@ export class SigninComponent implements OnInit {
       });
   }
 
-  forgotPasword() {
+  forgotPassword() {
 
   }
 

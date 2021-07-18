@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
       console.log('The dialog was closed');
       this.isAuthenticated = true;
     });
-   
+
   }
 
   showLogoutDialog() {
