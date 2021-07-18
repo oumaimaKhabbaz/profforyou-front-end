@@ -1,7 +1,9 @@
+import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormControl,Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import {catchError, map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +18,7 @@ export class SignupComponent implements OnInit {
   lastName = new FormControl('');
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } 
 
 
   ngOnInit(): void {

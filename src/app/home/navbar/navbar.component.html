@@ -1,1 +1,30 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+  <div>
+    <a routerLink="/home">Prof4you</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="50px" class="navigation-items">
+      <li>
+        <a routerLink="/tutors">Tutors</a>
+      </li>
+      <li>
+        <a routerLink="/about">About Us</a>
+      </li>
+      <li>
+        <a routerLink="/donation">Donation</a>
+      </li>
+      <li>
+        <a *ngIf="isAuthenticated" routerLink="/profile">My profile</a>
+      </li>
+      <li>
+        <a *ngIf="!isAuthenticated"  (click)="signUp()"  routerLink="#">Sign Up</a>
+      </li>
+      <li>
+        <a *ngIf="!isAuthenticated" (click)="signIn()" routerLink="#">Sign in</a>
+      </li>
+      <li>
+        <a *ngIf="isAuthenticated" (click)="logout()" routerLink="#">log out</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
