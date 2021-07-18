@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-
+import {catchError, map, tap} from 'rxjs/operators';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -44,5 +44,10 @@ export class SigninComponent implements OnInit {
           console.error('There was an error!', error);
         }
       });
+}
+handleError(method: string, message: string) {
+  console.log(method + message)
+  return Observable.throw(message);
+  ;
 }
 }

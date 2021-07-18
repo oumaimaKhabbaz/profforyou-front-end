@@ -15,6 +15,9 @@ import { SearchformComponent } from './home/searchform/searchform.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { MessagesComponent } from './messages/messages.component';
+import { OpenCloseComponent } from './open-close/open-close.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     SearchformComponent,
     CardComponent,
     FooterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    MessagesComponent,
+    OpenCloseComponent,
+    PaymentComponent
 
 
   ],
@@ -39,6 +45,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+    
 
   ],
   providers: [],
