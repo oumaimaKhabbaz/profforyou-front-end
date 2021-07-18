@@ -9,9 +9,6 @@ import { Observable, throwError } from 'rxjs';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
- 
-
   email = new FormControl('');// dataBinding // one way binding
   password = new FormControl('');
 
@@ -34,7 +31,7 @@ export class SigninComponent implements OnInit {
     console.log("button is clicked")
     return this.http.post<any>("http://localhost:8080/users", {
       "email": this.email.value, "password": this.password.value
-  
+
     })
       .subscribe({
         next: data => {
@@ -44,5 +41,9 @@ export class SigninComponent implements OnInit {
           console.error('There was an error!', error);
         }
       });
-}
+  }
+
+  forgotPasword() {
+
+  }
 }

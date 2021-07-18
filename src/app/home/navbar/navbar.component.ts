@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  isAuthenticated =  false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleIsAuthenticated () {
+    this.isAuthenticated = !this.isAuthenticated; 
   }
 
 }
