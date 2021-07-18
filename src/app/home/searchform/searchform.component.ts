@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { SearchService } from 'src/app/shared/services/search.service';
-import { ProfSearch } from 'src/app/shared/model/profSearch';
+import { ProfModel } from 'src/app/shared/model/profSearch';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { ProfSearch } from 'src/app/shared/model/profSearch';
 export class SearchformComponent implements OnInit {
 
   subject= new FormControl('');
-  profs: Array<ProfSearch> = [];
+  profs: Array<ProfModel> = [];
 
   constructor(private searchService: SearchService) { }
    

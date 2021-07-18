@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+export interface DialogData {
+  username: string;
+  name: string;
+}
+
 
 @Component({
   selector: 'app-signin',
@@ -12,10 +19,11 @@ export class SigninComponent implements OnInit {
   email = new FormControl('');// dataBinding // one way binding
   password = new FormControl('');
 
+  constructor(private http: HttpClient,
+    public dialogRef: MatDialogRef<SigninComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
-
-  constructor(private http: HttpClient) { }
-
+  
 
   ngOnInit(): void {
   }
@@ -46,4 +54,9 @@ export class SigninComponent implements OnInit {
   forgotPasword() {
 
   }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }

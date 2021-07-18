@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl,Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export interface DialogData {
+  username: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +22,9 @@ export class SignupComponent implements OnInit {
   lastName = new FormControl('');
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, 
+    public dialogRef: MatDialogRef<SignupComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
 
   ngOnInit(): void {
@@ -52,5 +60,9 @@ export class SignupComponent implements OnInit {
     console.log(method + message)
     return Observable.throw(message);
     ;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }

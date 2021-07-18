@@ -9,6 +9,7 @@ import { DonationComponent } from './donation/donation.component';
 import { CardComponent } from './card/card.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { TutorsComponent } from './home/tutors/tutors.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path: 'card',
     component: CardComponent
+  },
+
+  {
+    path: 'tutors',
+    component: TutorsComponent
   },
 
   {

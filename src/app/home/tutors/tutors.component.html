@@ -1,1 +1,24 @@
-<p>tutors works!</p>
+<div class="content" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutGap="16px" fxLayoutAlign="center center">
+        <div fxFlex="25%" *ngFor="let prof of profs">
+            <mat-card class="example-card" style="background-color: rgba(51, 170, 51, .1)">
+                <mat-card-header>
+                    <mat-card-title>{{prof.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="https://www.superprof.co.uk/images/teachers/teacher-home-engaging-humorous-professional-and-qualified-computer-science-teacher-with-years-experience-offering-python-tutoring-online.jpg"
+                    alt="Photo of {{prof.name}}">
+                <mat-card-content>
+                    <span><mat-icon aria-hidden="false" aria-label="Example home icon">star</mat-icon> {{prof.rate}}</span>
+                    <p>
+                        {{prof.description}}
+                    </p>
+                    
+                    <div fxLayout="row wrap">
+                        <span>{{prof.courseCost}}$ /hour  <mat-icon aria-hidden="false" aria-label="Example home icon">card_giftcard</mat-icon> 1st Lesson free</span> 
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <br/>
+        </div>
+    </div>
+</div>

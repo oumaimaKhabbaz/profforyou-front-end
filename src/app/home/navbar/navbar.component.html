@@ -17,13 +17,13 @@
         <a *ngIf="isAuthenticated" routerLink="/profile">My profile</a>
       </li>
       <li>
-        <a *ngIf="!isAuthenticated"  (click)="signUp()"  routerLink="#">Sign Up</a>
+        <a *ngIf="!isAuthenticated"  (click)="showSignUpDialog()"  routerLink="#">Sign Up</a>
       </li>
       <li>
-        <a *ngIf="!isAuthenticated" (click)="signIn()" routerLink="#">Sign in</a>
+        <a *ngIf="!isAuthenticated" (click)="showSignInDialog()" routerLink="#">Sign in</a>
       </li>
       <li>
-        <a *ngIf="isAuthenticated" (click)="logout()" routerLink="#">log out</a>
+        <a *ngIf="isAuthenticated" (click)="showLogoutDialog()" routerLink="#">log out</a>
       </li>
     </ul>
   </div>

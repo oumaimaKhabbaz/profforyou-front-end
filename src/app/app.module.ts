@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { SearchformComponent } from './home/searchform/searchform.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { TutorsComponent } from './home/tutors/tutors.component';
 
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -73,6 +75,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DonationComponent,
     SearchformComponent,
     CardComponent,
+    TutorsComponent,
     FooterComponent,
     ForgotPasswordComponent,
     NavbarComponent
@@ -81,6 +84,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatInputModule,
     MatCardModule,
@@ -98,6 +102,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule
   ],
     exports:[
+      BrowserModule,
       A11yModule,
       ClipboardModule,
       CdkStepperModule,
