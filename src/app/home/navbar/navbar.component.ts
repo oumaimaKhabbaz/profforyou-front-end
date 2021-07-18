@@ -17,4 +17,16 @@ export class NavbarComponent implements OnInit {
     this.isAuthenticated = !this.isAuthenticated; 
   }
 
+  signUp(){
+
+  }
+
+  signIn(){
+    this.isAuthenticated = true; 
+  }
+
+  logout(){
+    this.isAuthenticated = false; 
+  }
+
 }
