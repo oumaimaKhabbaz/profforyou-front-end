@@ -6,6 +6,7 @@
     font-family: Ubuntu;
     font-style: normal;
     scroll-behavior: smooth;
+    
   }
  
   .title-ctn{
@@ -32,9 +33,13 @@ padding-bottom: 50px;
 
 
     text-align: center;
-   
+    margin-top: 100px;
+    font-size:30px
+    
 
 }
+
+
 
 .donate{
    
@@ -57,12 +62,19 @@ padding-bottom: 50px;
     align-items: center;
     justify-content: space-around;
     padding: 0px 100px;
+    margin-top:90px;
 }
+.test{
+    margin-top: 90px;
+}
+
 
  .card-img {
   
     width: 193px;
-height: 133px;
+/* height: 133px; */
+padding:0px 100px;
+align-items: center;
 
  }
 
@@ -71,10 +83,22 @@ height: 133px;
   .card-title{
 
 
+    padding: 0px 30px;
 font-size: larger;
+line-height:35px;
+
+
+
 
   }
 .card-description{
     font-size: medium;
+    padding: 0px 100px;
+   margin-top: 40px;
+    justify-content: space-between;
+  
 }
- 
+.red{
+    color: #b30000;
+    font-weight:bold;
+}
