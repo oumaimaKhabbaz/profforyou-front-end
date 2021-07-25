@@ -11,6 +11,17 @@
   justify-content: center;
   width: 100%;
 }
+form.header.screen, 
+form.header.screen .video{ 
+width:100%;
+}
+button.header-cta { 
+  border: none;
+  cursor: pointer;
+color:#ffffff; }
+  
+
+
 
 .container-center-horizontal > * {
   pointer-events: auto;
@@ -52,7 +63,7 @@ input:focus {
     width: 1440px;
   }
   .header .header-cta {
-    background-color: #ff5757;
+    background-color: #B30000;
     border-radius: 10px;
     box-shadow: 2px 2px 15px #00000040;
     cursor: pointer;
@@ -75,6 +86,7 @@ input:focus {
     top: 13px;
     white-space: nowrap;
     width: auto;
+    color: #ffffff;
   }
   .header .header-logo {
     background-color: transparent;
@@ -215,7 +227,7 @@ input:focus {
   .header .header-search-bar-placeholder {
     background-color: transparent;
     border: 0;
-    color: #929294;
+    color: #ffffff;
     font-family: var(--font-family-ubuntu);
     font-size: var(--font-size-m);
     font-style: normal;
@@ -308,7 +320,7 @@ input:focus {
     background-color: transparent;
     color: var(--white);
     font-family: var(--font-family-ubuntu);
-    font-size: var(--font-size-l);
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     margin-top: 15px;
@@ -321,12 +333,13 @@ input:focus {
     text-align: left;
     top: 435px;
     width: 368px;
+    color: #ffffff;
   }
   .header .header-title {
     background-color: transparent;
-    color: var(--white);
+    color: #ffffff;
     font-family: var(--font-family-ubuntu);
-    font-size: var(--font-size-xxl);
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     height: auto;
@@ -348,9 +361,11 @@ input:focus {
     position: absolute;
     top: 0px;
     width: 1440px;
+    
+    
   }
   .header .span0 {
-    color: #ff5757;
+    color: #B30000;
     font-style: normal;
   }
   .header .span1 {
@@ -369,6 +384,7 @@ input:focus {
     top: 751px;
     white-space: nowrap;
     width: 368px;
+    color: #ffffff;
   }
   .header .vector-2 {
     background-color: transparent;
@@ -497,15 +513,14 @@ input:focus {
   width: 447px;
 }
 
-.component-1 .explore-more-3 {
+/* .component-1 .explore-more-3 {
   background-color: transparent;
-  color: #ffffff;
+  color: #B30000;
   font-family: var(--font-family-ubuntu);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
-  height: auto;
-  left: 36px;
+  left: 100%;
   letter-spacing: 0px;
   line-height: 27.6px;
   mix-blend-mode: normal;
@@ -513,34 +528,38 @@ input:focus {
   text-align: left;
   top: 13px;
   white-space: nowrap;
-  width: auto;
-}
+  width: 100%;
+  border: none;
+} */
 .component-1 .explore-more-2 {
-  background-color: #ff5757;
+  background-color: #B30000;
   border-radius: 10px;
   box-shadow: 2px 2px 15px #00000040;
   height: 54px;
   left: 841px;
   mix-blend-mode: normal;
   position: absolute;
-  top: 509px;
+  top: 530px;
   width: 218px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
 }
 .component-1 .our-teaching-guidance {
   background-color: transparent;
   color: #000000;
   font-family: var(--font-family-ubuntu);
-  font-size: var(--font-size-m);
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  height: auto;
+  height: 56px;
   left: 841px;
   letter-spacing: 0px;
   line-height: 27.6px;
   mix-blend-mode: normal;
   position: absolute;
   text-align: left;
-  top: 421px;
+   top: 430px; 
   width: 329px;
 }
 .component-1 .explore-more-1 {
@@ -550,13 +569,13 @@ input:focus {
   mix-blend-mode: normal;
   position: absolute;
   top: 0px;
-  width: 1440px;
+  /* width: 1440px;  */
 }
 .component-1 .title-1 {
   background-color: transparent;
   color: #000000;
   font-family: var(--font-family-ubuntu);
-  font-size: var(--font-size-l);
+  font-size: 45px;
   font-style: normal;
   font-weight: 700;
   height: auto;
@@ -566,7 +585,7 @@ input:focus {
   mix-blend-mode: normal;
   position: absolute;
   text-align: left;
-  top: 258px;
+  top: 250px;
   width: 389px;
 }
 
@@ -601,13 +620,13 @@ input:focus {
   mix-blend-mode: normal;
   position: absolute;
   top: 0px;
-  width: 1440px;
+  /* width: 1440px; */
 }
 .component-1 .section-3-heading {
   background-color: transparent;
   color: var(--black);
   font-family: var(--font-family-roboto);
-  font-size: var(--font-size-l);
+  font-size:45px;
   font-style: normal;
   font-weight: 700;
   height: auto;
@@ -627,6 +646,7 @@ input:focus {
   position: absolute;
   top: 347px;
   width: 512px;
+  font-size: 28px;
 }
 .component-1 .section-3-step-1-circle {
   background-color: transparent;
@@ -674,6 +694,7 @@ input:focus {
   position: absolute;
   top: 493px;
   width: 518px;
+  font-size: 28px;
 }
 .component-1 .section-3-step-2-icon {
   background-color: transparent;
@@ -743,6 +764,7 @@ input:focus {
   text-align: left;
   top: 29px;
   width: 336px;
+  font-size: 28px;
 }
 .component-1 .section-3-step-circle {
   background-color: transparent;
@@ -771,3 +793,4 @@ input:focus {
   font-style: normal;
   font-weight: 400;
 }
+

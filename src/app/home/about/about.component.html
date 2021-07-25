@@ -1,69 +1,71 @@
 <div>
-    <div>
-       <h1> our mission</h1>
-       <button>Arrowdown- idon</button>
+    <div class="title-ctn">
+        <span></span>
+        <h1 class="title"> Our Mission</h1>
+        <a (click)="scrollTo(info)">
+        <img src="/assets/arrow-down.png">
+        </a>
     </div>
-    <div>
+    <div class="section" #info>
         <p>We are an advanced digital platform in online learning for students.</p>
 
-        <p>Our aim is to enhance the quality of teaching. To do so, we have tutors all over the globe, the most flexible and competent.</p>
+        <p>Our aim is to enhance the quality of teaching. To do so, we have tutors all over the globe, the most flexible
+            and competent.</p>
 
-        <p>Profforyou enables students</p>
+        <p>Profforyou enables students with reading disabilities to have access to the platform.</p>
     </div>
-    <div>
-        <div>
-            Some facts about foryou
-        </div>
-        <div>
-            <div class="frist element">
-                <div class="card">
-                    <img src="assets/">
+    <div class="section facts">
+        <h2>
+            Some facts about Profforyou
+        </h2>
+        <div class="card-ctn">
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/online learning.svg" alt="online learning image">
                 </div>
                 <div>
-                    <div>
-                        <h5>Advanced learning</h5>
-                    </div>
-                    <div>
-                        <p>The variety of competentent tutors</p>
+                    <div class="card-title">Advanced learning</div>
+                    <div class="card-description">
+                    The variety of competentent tutors and their flexibility
                     </div>
                 </div>
             </div>
-            <div class="second element">
-                <div class="card">
-                    <img src="assets/">
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/wireframe.svg" alt="accesible in different devices image">
                 </div>
                 <div>
-                    <div>
-                        <h5>Advanced learning</h5>
-                    </div>
-                    <div>
-                        <p>The variety of competentent tutors</p>
+                    
+                        <div class="card-title">Accessible in different devices</div>
+                
+                    <div class="card-description">
+                        We are mobile-friendly
                     </div>
                 </div>
             </div>
-            <div class="third element">
-                <div class="card">
-                    <img src="assets/">
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/support team.svg" alt="designed for support image">
                 </div>
                 <div>
-                    <div>
-                        <h5>Advanced learning</h5>
-                    </div>
-                    <div>
-                        <p>The variety of competentent tutors</p>
+                    
+                       <div class="card-title"> Designed for support</div>
+                    
+                    <div class="card-description">
+                        Our platform is designed not only for students but also for disabled users 
                     </div>
                 </div>
             </div>
-            <div class="fourth element">
-                <div class="card">
-                    <img src="assets/">
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/business deal.svg" alt="business deal image">
                 </div>
                 <div>
-                    <div>
-                        <h5>Advanced learning</h5>
-                    </div>
-                    <div>
-                        <p>The variety of competentent tutors</p>
+                
+                        <div class="card-title">Free access for students</div>
+                    
+                    <div class="card-description">
+                        Budget-friendly makes our website stands out
                     </div>
                 </div>
             </div>
@@ -72,8 +74,7 @@
     <div class="donate section">
         <h2>Donate</h2>
         <p>
-            We are always looking for people to help students in ...
-        </p>
+            We are always looking for people to help students in needs who don’t have access to laptops/computers.</p>
         <div>
             <button>Donate</button>
         </div>
@@ -84,5 +85,5 @@
         <button>Facebook</button>
         <button>Github</button>
     </div>
-</div>
 
+</div>

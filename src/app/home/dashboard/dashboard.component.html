@@ -1,11 +1,12 @@
 <input type="hidden" id="header" name="page" value="header" />
 <div class="container-center-horizontal">
     <form class="header screen" name="form1" action="form1" method="post">
-        <img class="profforyou-hero-video-1" alt="Profforyou Header Image"
-            src="assets/profforyou-hero-video-1@1x.png" />
+        <video class="video" autoplay loop >
+            <source src="/assets/profforyou-hero-video (1).mp4" type="video/mp4">
+          </video>
         <div class="header-logo">
         </div>
-        <div class="header-nav-menu">
+        <!-- <div class="header-nav-menu">
             <div class="header-nav-item-5">
                 <div class="header-nav-item-5-text ubuntu-normal-white-24px">Tutors</div>
             </div>
@@ -21,14 +22,14 @@
             <div class="header-nav-item-1">
                 <div class="header-nav-item-1-text ubuntu-normal-white-24px">Log In</div>
             </div>
-        </div>
-        <h1 class="header-title">Find Now Your Favorite Tutors &amp; Learn Anything</h1>
+        </div> -->
+        <h1 class="header-title">Find Now Your Favourite Tutors &amp; Learn Anything</h1>
         <div class="header-sub-heading">Choose a subject tutor and master the skills</div>
         <div class="trusted-by-over-1000-students ubuntu-normal-white-24px">Trusted by over 1000+ students</div>
-        <a href="javascript:SubmitForm('form1')">
-            <div class="header-cta">
-                <div class="header-cta-text ubuntu-normal-white-24px">Find a Tutor</div>
-            </div>
+        <a routerLink="/tutors">
+            <button class="header-cta" type="button">
+               Find a Tutor
+            </button>
         </a>
         <div class="header-search-bar">
             <img class="header-search-bar-search-icon" src="assets/header-search-bar-search-icon@2x.svg" />
@@ -50,9 +51,10 @@
 <div class="container-center-horizontal">
     <div class="component-1 screen">
         <div class="explore-more-1"></div>
-        <div class="explore-more-2">
-            <div class="explore-more-3">Explore More</div>
-        </div>
+        <button class="explore-more-2" type ="button">
+            Explore More
+            
+       </button>
         <div class="our-teaching-guidance">Our teaching guidance help our students to grow</div>
         <h1 class="title-1">We Are Providing Best Service To Our Students</h1>
         <div class="asset-1"><img class="asset-2" src="assets/asset-5-1@2x.png"

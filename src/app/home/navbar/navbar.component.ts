@@ -11,8 +11,9 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
-
+  
   toggleIsAuthenticated () {
     this.isAuthenticated = !this.isAuthenticated; 
   }
@@ -28,5 +29,6 @@ export class NavbarComponent implements OnInit {
   logout(){
     this.isAuthenticated = false; 
   }
+ 
 
 }

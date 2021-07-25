@@ -54,8 +54,8 @@ const routes: Routes = [
   {
     path: 'forgotPassword',
     component: ForgotPasswordComponent
-  }
-
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
   
 ];
 

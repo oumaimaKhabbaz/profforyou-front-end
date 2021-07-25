@@ -1,11 +1,16 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
+    position: fixed;
 }
 mat-sidenav {
     width: 250px;
 }
 main {
     padding: 10px;
+}
+.navigation-items{
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 /* for sidenav to take a whole page */
@@ -16,11 +21,11 @@ html, body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:hover, a:active{
-    color: lightgray;
+    color: #B30000 ;
 }
 
 .navigation-items{
@@ -29,12 +34,79 @@ a:hover, a:active{
     margin: 0;
 }
 
-mat-toolbar{
+/* mat-toolbar{
    
-}
+} */
 
-@media(max-width: 959px){
+@media screen and (max-width: 959px){
     mat-toolbar{
         border-radius: 0px;
     }
 }
+.bg-transparent{
+    background-color: transparent;
+    position: absolute;
+    top:0;
+    z-index: 2;
+    
+
+}
+.bg-transparent *{
+    color:#ffffff;
+}
+
+.bg-transparent .pink{
+    color:#B30000;
+}
+/* #menu{
+   
+    width:35ps;
+    height: 30px;
+    margin: 30px 0 20px 20px;
+    cursor: ponter;
+}
+.bar{
+    height: 5px;
+    width:100%;
+    background-color: #ffffff;
+    display:block;
+    border-radius: 5px;
+
+}
+#bar1{
+    transform:translateY(-px);
+
+}
+#bar3{
+    transform: translateY(4px);
+} */
+.toggle-btn{
+    outline: none;
+    background: transparent;
+    height:198%;
+    border: none;
+    cursor: pointer;
+    padding:100px;
+    box-sizing: content-box;
+   
+    
+}
+.toggle-btn > img{
+
+    height: 100%;
+    
+    
+
+}
+
+.toggle-btn>div>div { 
+    width :30px;
+    height:5px; 
+    margin-top: 8px;
+     background : #B30000;
+    }
+
+    .toggle-btn > div {
+         display : flex; 
+        flex-direction: column;
+    }

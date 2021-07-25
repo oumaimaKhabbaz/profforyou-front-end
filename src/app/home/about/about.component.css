@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    
+    font-family: Ubuntu;
+    font-style: normal;
+    scroll-behavior: smooth;
+  }
+ 
+  .title-ctn{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+padding-bottom: 50px;
+      height: 550px;
+  }
+  .title{
+      font-size: 40px;
+      font-weight: bold;
+      
+  }
+.section {
+   
+    width:100%;
+   
+    margin: auto;
+    
+    font-weight: normal;
+
+
+    text-align: center;
+   
+
+}
+
+.donate{
+   
+    height: 500px;
+    
+}
+
+/* .sociale networks{
+    
+ 
+    left: 217px;
+    top: 1402px;
+
+} */
+
+.card-ctn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 100px;
+}
+
+ .card-img {
+  
+    width: 193px;
+height: 133px;
+
+ }
+
+
+
+  .card-title{
+
+
+font-size: larger;
+
+  }
+.card-description{
+    font-size: medium;
+}
+ 

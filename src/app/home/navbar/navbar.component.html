@@ -1,6 +1,7 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="bg-transparent">
+  
   <div>
-    <a routerLink="/home">Prof4you</a>
+    <a routerLink="/home"><span class="pink">Prof</span>foryou</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="50px" class="navigation-items">
@@ -17,7 +18,7 @@
         <a *ngIf="isAuthenticated" routerLink="/profile">My profile</a>
       </li>
       <li>
-        <a *ngIf="!isAuthenticated"  (click)="signUp()"  routerLink="#">Sign Up</a>
+        <a *ngIf="!isAuthenticated" (click)="signUp()" routerLink="#">Sign Up</a>
       </li>
       <li>
         <a *ngIf="!isAuthenticated" (click)="signIn()" routerLink="#">Sign in</a>
@@ -25,6 +26,45 @@
       <li>
         <a *ngIf="isAuthenticated" (click)="logout()" routerLink="#">log out</a>
       </li>
+    
+      <!-- <div id="menu-bar">
+        <div id="menu">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+
+      </div> -->
+      <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button> -->
+      <!-- <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu> -->
+
+      
     </ul>
   </div>
+
+
+  <button class="toggle-btn">
+
+  <div>
+    <div></div>
+    <div> </div>
+    <div> </div>
+  </div>   
+  
+  </button>
 </mat-toolbar>

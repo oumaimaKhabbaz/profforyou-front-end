@@ -11,5 +11,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+scrollTo($element:any){
+  $element.scrollIntoView(
+    {behaviour: "smooth", inline:"nearest", block:"start"})
+}
 }
