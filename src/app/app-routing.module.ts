@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './home/signup/signup.component';
 import { SigninComponent } from './home/signin/signin.component';
@@ -9,7 +9,7 @@ import { DonationComponent } from './donation/donation.component';
 import { CardComponent } from './card/card.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
-
+import { TutorsComponent } from './home/tutors/tutors.component';
 
 const routes: Routes = [
   {
@@ -54,6 +54,11 @@ const routes: Routes = [
   {
     path: 'forgotPassword',
     component: ForgotPasswordComponent
+  
+  },
+  {
+    path: 'tutors',
+    component:TutorsComponent
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
   
