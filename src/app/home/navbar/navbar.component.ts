@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { SigninComponent } from '../signin/signin.component';
+import { SignupComponent } from '../signup/signup.component';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isAuthenticated =  false;
+  isAuthenticated = false;
+  name: string ='';
+  username: string ='';
+  
+  showFiller = false;
 
-  constructor() { }
+  menuIsOpen: boolean = false;
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   
@@ -19,11 +28,29 @@ export class NavbarComponent implements OnInit {
   }
 
   signUp(){
+    const dialogRef = this.dialog.open(SignupComponent, {
+      width: '250px',
+      data: { name: this.name, animal: this.username }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.username = result;
+    });
 
   }
 
   signIn(){
-    this.isAuthenticated = true; 
+  
+    const dialogRef = this.dialog.open(SigninComponent, {
+      width: '250px',
+      data: { name: this.name, animal: this.username }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.isAuthenticated = true;
+    });
   }
 
   logout(){

@@ -20,44 +20,60 @@ padding-bottom: 50px;
       background-image: url("../../../assets/about-us-img.png");
   }
   .title{
-      font-size: 40px;
+      font-size: 80px;
       font-weight: bold;
+      color:#ffffff;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
       
   }
 .section {
    
     width:100%;
-   
-    margin: auto;
-    
+    height: 160px;
     font-weight: normal;
-
-
     text-align: center;
-    margin-top: 100px;
-    font-size:30px
-    
+    /* margin-bottom: px; */
+    font-size:30px;
 
 }
 
 
 
 .donate{
-   padding: 50px 0px;
-    height: 500px;
+   /* padding: 50px 0px; */
+    height: 680px;
+
     display:flex;
     flex-direction: column; 
     align-items: center;
     justify-content: space-evenly;
     background-image: url("../../../assets/donate-img.png");
+   color:#ffffff;
+   margin-top: 400px;
+   margin-bottom: 100px;
 }
-/* .sociale networks{
-    
- 
-    left: 217px;
-    top: 1402px;
 
-} */
+ .social-getintouch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start ;
+    padding: 100px 10px 100px;
+   margin-left: 100px;
+    height: 300px;
+    padding-left: 30px;
+   
+
+} 
+.get-in-touch{
+    padding-right: 50px;
+    font-size: 30px;
+    font-weight:450;
+    
+    
+}
 
 .card-ctn{
     display: flex;
@@ -69,7 +85,11 @@ padding-bottom: 50px;
     margin-top:90px;
 }
 .test{
-    margin-top: 90px;
+    margin-top: 280px;
+    font-size: 44px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
@@ -88,7 +108,7 @@ display:flex;
 justify-content: center;
 height: 70px;
     padding: 0px 30px;
-font-size: larger;
+font-size: 33px;
 line-height:35px;
 
 
@@ -96,13 +116,38 @@ line-height:35px;
 
   }
 .card-description{
-    font-size: medium;
+    /* font-size: medium; */
     padding: 0px 100px;
    margin-top: 40px;
-    justify-content: space-between;
-  
+    justify-content: space-around;
+    font-style: normal;
+    font-size: 19px;
+    align-items:flex-start;
+
 }
 .red{
     color: #b30000;
     font-weight:bold;
+}
+
+.section-wrapper{
+    padding-top: 200px;
+    height: 1000px;
+    font-style: normal;
+    font-weight: normal;
+    background-color: #F6F6F6;
+}
+ .size{
+font-size: 55px;
+}
+.donate-btn{
+    font-size: 24px;
+    background-color: #b30000;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    width:141px;
+    height:48px;
+  
+    
 }

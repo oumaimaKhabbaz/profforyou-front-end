@@ -1,20 +1,24 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './home/signup/signup.component';
-import { SigninComponent } from './home/signin/signin.component';
+ import { SigninComponent } from './home/signin/signin.component';
 import { AboutComponent } from './home/about/about.component';
 import { HelpComponent } from './help/help.component';
 import { SearchformComponent } from './home/searchform/searchform.component';
-import { DonationComponent } from './donation/donation.component';
+import { PaymentComponent } from './payment/payment.component';
 import { CardComponent } from './card/card.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { TutorsComponent } from './home/tutors/tutors.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { DonationComponent } from './donation/donation.component';
+
 
 const routes: Routes = [
-  {
+   {
     path: 'register',
-    component: SignupComponent
+   component: SignupComponent
   },
 
   {
@@ -37,14 +41,11 @@ const routes: Routes = [
     component: HelpComponent
   },
 
-  {
-    path: 'donation',
-    component: DonationComponent
-  },
-  {
-    path: 'search',
-    component: SearchformComponent
-  },
+ 
+    {
+     path: 'search',
+      component: SearchformComponent
+    },
 
   {
     path: 'card',
@@ -60,6 +61,24 @@ const routes: Routes = [
     path: 'tutors',
     component:TutorsComponent
   },
+
+  {
+    path: 'termsandconditions',
+    component: TermsandconditionsComponent
+  },
+
+  {
+    path: 'privacy',
+    component: PrivacyComponent
+  },
+   {
+     path: 'donation',
+   component: DonationComponent
+   },
+   {
+     path:'payment',
+     component: PaymentComponent
+   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
   
 ];

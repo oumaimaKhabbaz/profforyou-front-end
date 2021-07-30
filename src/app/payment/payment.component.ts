@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-donation',
-  templateUrl: './donation.component.html',
-  styleUrls: ['./donation.component.css']
+  selector: 'app-payment',
+  templateUrl: './payment.component.html',
+  styleUrls: ['./payment.component.css']
 })
-export class DonationComponent implements OnInit {
+export class PaymentComponent implements OnInit {
 
-  constructor() { }
   amountValue: number = 50;
   isEditing: boolean = false;
   amountIsValid: boolean = true;
   canPay: boolean = false;
   paymentSuccessful: boolean = false; 
 
+  constructor() { }
+
   ngOnInit(): void {
   }
-
   isArrowCode(code: number): boolean {
     const LEFT = 37;
     const RIGHT = 39;
@@ -27,6 +27,7 @@ export class DonationComponent implements OnInit {
     const element = $event.target;
     const length = element.value.length;
     const key = $event.key;
+
     console.log($event.keyCode)
 
     if (this.isArrowCode($event.keyCode)) {

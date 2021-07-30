@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { SignupComponent } from './home/signup/signup.component';
 import { SigninComponent } from './home/signin/signin.component';
 import { AboutComponent } from './home/about/about.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { HelpComponent } from './help/help.component';
-import { DonationComponent } from './donation/donation.component';
-import { SearchformComponent } from './home/searchform/searchform.component';
+import { HttpClientModule } from '@angular/common/http';
+ import { SearchformComponent } from './home/searchform/searchform.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
+import { TutorsComponent } from './home/tutors/tutors.component';
 import {A11yModule} from '@angular/cdk/a11y';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -59,23 +59,35 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
-
+import { DonationComponent } from './donation/donation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
+
+
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    SigninComponent,
+     SignupComponent,
+     SigninComponent,
     AboutComponent,
     HelpComponent,
-    DonationComponent,
-    SearchformComponent,
+    
+     SearchformComponent,
     CardComponent,
     FooterComponent,
     ForgotPasswordComponent,
-    NavbarComponent
+    NavbarComponent,
+    PrivacyComponent,
+    TermsandconditionsComponent,
+    DonationComponent,
+   PaymentComponent,
+   TutorsComponent
+   
+      
   ],
   imports: [
     BrowserModule,
@@ -95,7 +107,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
     exports:[
       A11yModule,

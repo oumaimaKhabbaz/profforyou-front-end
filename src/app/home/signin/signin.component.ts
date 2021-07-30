@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 
@@ -9,12 +9,16 @@ import { Observable, throwError } from 'rxjs';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-  email = new FormControl('');// dataBinding // one way binding
-  password = new FormControl('');
+  email = new FormControl('', [Validators.required,
+      Validators.pattern("[^@]*@[^@]*")
+     ]);// dataBinding // one way binding
+  password = new FormControl('', [Validators.required,
+  Validators.minLength(8)
+]);
 
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } // http client
 
 
   ngOnInit(): void {
@@ -42,6 +46,8 @@ export class SigninComponent implements OnInit {
         }
       });
   }
+  
+  
 
   forgotPasword() {
 

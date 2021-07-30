@@ -3,15 +3,23 @@
 
     <h2 class="login-header">Sign-in</h2>
 
-    <form class="login-container">
+    <form class="login-container" (ngSubmit)="createUser()">
 
         <p><input [formControl]="email" type="email" placeholder="Email"></p>
-
-        <p><input [formControl]="password" type="password" placeholder="Password"></p>
-
-        <p><button (click)="forgotPasword()">forgot password ?</button></p>
-
+        <div class="form-control-feedback"
+        *ngIf = "email.errors && (email.dirty || email.touched)">
+   
+        <p *ngIf="email.errors.required">Email is required</p>
+        <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
+        
+      </div>
+        <p><input [formControl]="password" type="password" placeholder="Password" required></p>
+       
+          <div class="forgot-password ">
+        <p><button (click)="forgotPasword()" type="button">forgot password ?</button></p>
+    </div>
+  
         <p><input type="submit" (click)="createUser()" value="Sign-in"></p>
-
+    
     </form>
-</div>ng
+</div>

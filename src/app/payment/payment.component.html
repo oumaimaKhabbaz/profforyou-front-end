@@ -1,0 +1,57 @@
+
+<br>
+<br>
+
+<div class="pay-ctn">
+    <h1 class="pay-title">Payment Details</h1>
+    <div class="cards">
+        <img src="/assets/credit_cards.png" alt="" srcset="">
+    </div>
+    <form class="pay-form">
+        <div class="form-line">
+            <label>Payment Amount</label>
+            <div class="edit">
+                <div>
+                    <span>£ </span>
+                    <input class="amount" #amount value="{{amountValue | number : '1.2-2'}}" [readonly]="!isEditing"
+                        (keyup)="updateAmountIsValid(amount)">
+                </div>
+                <button type="button" (click)="editAmount(amount)" [disabled]="!amountIsValid">
+                    {{isEditing ? "Done" : "Edit"}}
+                </button>
+            </div>
+        </div>
+        <div class="form-line">
+            <label for="name">Name on card</label>
+            <input id="name" name="name" type="text" (keyup)="updateCanPay()">
+        </div>
+        <div class="form-line">
+            <label for="cardno">Card number</label>
+            <input id="cardno" name="cardno" type="text" maxlength="19" (keydown)="adaptCardNo($event)"
+                (keyup)="updateCanPay()">
+        </div>
+        <div class="form-line-double">
+            <label for="expiry">Expiry date</label>
+            <label for="seccode">Security code</label>
+            <input id="expiry" class="date" name="expiry" type="text" placeholder="MM / YY" maxlength="7"
+                (keydown)="adaptExpiration($event)" (keyup)="updateCanPay()">
+            <input id="seccode" type="number" name="seccode" maxlength="6" (keyup)="updateCanPay()">
+        </div>
+        <div class="form-line">
+            <label for="zip">Zip/Postal code</label>
+            <input id="zip" name="zip" type="text" (keyup)="updateCanPay()">
+        </div>
+        <button class="pay-btn" [disabled]="isEditing || canPay" (click)="pay">
+            <img src="/assets/lock.png">
+            <span> &nbsp; Pay £ {{amountValue | number : '1.2-2'}}</span>
+        </button>
+    </form>
+    
+    <div *ngIf="paymentSuccessful" class="ok-message grid-overleap">
+        <h2>Payment Successful</h2>
+        <p>
+            Your payment has been successfully completed!
+        </p>
+        <img src="/assets/ok.png" class="ok-icon">
+    </div>
+</div>

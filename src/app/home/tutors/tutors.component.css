@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 250px;
+    border-radius:15px;
+margin-top:150px;
+margin-left:80px;
+justify-content: s;
+}
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+   
+  
+  }
+
+  .content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}

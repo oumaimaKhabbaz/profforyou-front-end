@@ -1,1 +1,61 @@
-<p>help works!</p>
+<form [formGroup]="myform" novalidate (ngSubmit)="onSubmit()">
+  <div formGroupName="name">
+    <div class="form-group">
+      <label>FirstName</label>
+      <input type="text" class="form-control" formControlName="FirstName">
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+
+    </div>
+  </div>
+
+  <div class="form-group " [ngClass]="{
+      'has-success': email.valid && (email.dirty || email.touched),
+      'has-danger': email.invalid && (email.dirty || email.touched)
+    }">
+    <label>Email</label>
+    <input type="Email" class="form-control" formControlName="email">
+    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.required">Email is required</p>
+      <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
+    </div>
+    <pre> valid? {{myform.controls.email.valid}}</pre>
+  </div>
+  <div class="form-group">
+   
+    <label>message</label>
+
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<pre>{{ myform.value | json}}</pre>
+<!-- 
+    <form action="action_page.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">United Kingdom</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+    </div>
+</div>> -->

@@ -57,6 +57,7 @@ a:hover, a:active{
 
 .bg-transparent .pink{
     color:#B30000;
+    font-weight: bold;
 }
 /* #menu{
    
@@ -91,22 +92,84 @@ a:hover, a:active{
    
     
 }
-.toggle-btn > img{
 
-    height: 100%;
-    
-    
-
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.toggle-btn>div>div { 
-    width :30px;
-    height:5px; 
-    margin-top: 8px;
-     background : #B30000;
+.menu > div {
+    visibility: hidden;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #ff0000;
+    border-radius: 3px;
+    
+    z-index: 1;
+}
+
+.sidenav {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 850px){
+    .menu > div {
+        visibility: visible;
     }
 
-    .toggle-btn > div {
-         display : flex; 
-        flex-direction: column;
+    .links {
+        visibility: hidden;
     }
+
+    .nav {
+        display: none;
+    }
+
+    .menu:focus >.nav > ul,
+    .menu:focus-within>.nav > ul, 
+    .menu:active >.nav>.ul{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    .sidenav {
+        visibility: visible;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(2px);
+
+        /* transition: all .5s; */
+        animation: slide-in linear .4s;
+    }
+
+    @keyframes slide-in {
+        from {
+            left: -100px;
+            opacity: 0;
+        } to {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    .sidenav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: max-content;
+        background-color: rgb(0, 0, 0);
+        height: 100%;
+        width: 400px;
+    }
+   
+}

@@ -1,8 +1,6 @@
 :host {
     display: flex;
     justify-content: center;
-    /* background-color: #f6f6f6; */
-    
 }
 
 .pay-ctn {
@@ -14,15 +12,12 @@
     justify-content: center;
     align-items: center;
     box-shadow: 3px 5px 14px -5px;
-    margin-left: 369px;
-
-
 }
 
 .pay-title {
     padding: 30px;
-    background-color: rgb(226, 255, 240);
-    color: rgb(121, 180, 136);
+    background-color:#b30000;
+    color:#fff;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -108,7 +103,7 @@ input.date {
 .pay-btn {
     width: 100%;
     color: #fff;
-    background-color: rgb(0, 160, 99);
+    background-color: #b30000;
     border: none;
     border-radius: 5px;
     height: 40px;
@@ -130,39 +125,6 @@ input.date {
 
 .pay-btn > img {
     height: 60%;
-}
- 
-.title-ctn{
-     width: 950px;
-     
-    /* display:flex; */
-    flex-direction:column;
-    align-items: center;
-    justify-content: space-between;
-/* padding-bottom: 10px; */
-      height: 450px; 
-    /* background-image: url("../../../../assets/background-title.png");  */
-    background-image: url("/assets/background-title.png");
-     padding-right:1000px;  
-     /* padding-left:100px; */
-     margin-left: 100px;
-     margin-right:100px;
-     background-repeat: no-repeat;
-
-}
-
-.description-donation{
-  
-    display: flex;
-   width:100%;
-   /* background-color: #F6F6F6; */
-   padding-top: 218px;
-   padding-left: 344px;
-
-} 
-.red{
-    color: #b30000;
-    font-weight: bold;
 }
 .ok-message{
     width: 100%;

@@ -10,10 +10,12 @@ import { Observable, throwError } from 'rxjs';
 })
 export class SignupComponent implements OnInit {
 
-  email = new FormControl('',[Validators.required,]);// dataBinding // one way binding
-  password = new FormControl('');
-  firstName = new FormControl('');
-  lastName = new FormControl('');
+  email = new FormControl('',[Validators.required,
+    Validators.pattern("[^@]*@[^@]*")
+  ]);// dataBinding // one way binding
+  password = new FormControl('', Validators.required);
+  firstName = new FormControl('', Validators.required);
+  lastName = new FormControl('', Validators.required);
 
 
   constructor(private http: HttpClient) { }

@@ -1,6 +1,6 @@
 mat-grid-tile {
     background: #ffff;
-  
+    
 
 }
 .red{
@@ -42,10 +42,10 @@ button{
     background-color: #B30000;
     color: #ffff;
     border: none;
-   height: 35px;
+   height: 42px;
     width: 120px; 
     cursor: pointer;
-    position:absolute;
+   
     border-radius: 10px;
 }
  .email{
@@ -55,12 +55,12 @@ button{
     box-shadow: 2px 2px 15px;
     height: 54px;
     border: none;
-    height: 35px;
+    height: 40px;
  
     
     width: 200px;
   
-    margin-left: 25px;
+    margin-left: 73px;
    
 
 
@@ -68,8 +68,7 @@ button{
 .subscribe-form{
     display: flex;
     flex-direction: row;
-    align-items: center
-;
+    align-items: center;
 justify-content: space-around;
-width: 600px;
+width: 450px;
 }

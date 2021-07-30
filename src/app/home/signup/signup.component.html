@@ -4,12 +4,20 @@
     
     <h2 class="login-header">Sign-up</h2>
   
-    <form class="login-container">
-        <p><input [formControl]="firstName" type="firstName" placeholder="firstName"></p> 
-
-        <p><input [formControl]="lastName" type="lastName" placeholder="lastName"></p> 
+    <form class="login-container" (ngSubmit)= "createUser()">
+        
+        <p><input [formControl]="firstName" type="firstName" placeholder="First Name" required></p> 
+        
+        <p><input [formControl]="lastName" type="lastName" placeholder="Last Name" required></p> 
       <p><input [formControl]="email" type="email" required placeholder="Email"></p> 
+      <div class="form-control-feedback"
+      *ngIf = "email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.required">Email is required</p>
+      <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
+    </div>
       <p><input [formControl]="password" type="password" placeholder="Password"></p>
+    
       <p><input type="submit" (click) =  "createUser()" value="Sign-up"></p>
+ 
     </form>
   </div>
