@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './home/signup/signup.component';
- import { SigninComponent } from './home/signin/signin.component';
+import { SigninComponent } from './home/signin/signin.component';
 import { AboutComponent } from './home/about/about.component';
 import { HelpComponent } from './help/help.component';
 import { SearchformComponent } from './home/searchform/searchform.component';
@@ -13,6 +13,7 @@ import { TutorsComponent } from './home/tutors/tutors.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DonationComponent } from './donation/donation.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,12 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+
+  
+  {
+    path: 'subscribe',
+    component: SubscriptionComponent
   },
 
   {
