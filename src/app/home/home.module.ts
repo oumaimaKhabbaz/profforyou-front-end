@@ -5,7 +5,7 @@ import { SearchformComponent } from './searchform/searchform.component';
 
 import { AboutComponent } from './about/about.component';
 import { TutorsComponent } from './tutors/tutors.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'
 
@@ -59,7 +59,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
     SearchformComponent,
     AboutComponent,
     TutorsComponent,
-    DashboardComponent
   ],
   imports: [
     MatToolbarModule,
@@ -68,10 +67,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    MatSelectModule,
     MatTableModule,
     MatDividerModule,
     MatSlideToggleModule,
-    MatSelectModule,
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule

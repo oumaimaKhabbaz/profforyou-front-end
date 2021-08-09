@@ -1,42 +1,27 @@
 <input type="hidden" id="header" name="page" value="header" />
 <div class="container-center-horizontal">
     <form class="header screen" name="form1" action="form1" method="post">
-        <video class="video" autoplay loop >
+        <video class="video" autoplay loop>
             <source src="/assets/profforyou-hero-video (1).mp4" type="video/mp4">
-          </video>
+        </video>
         <div class="header-logo">
         </div>
-        <!-- <div class="header-nav-menu">
-            <div class="header-nav-item-5">
-                <div class="header-nav-item-5-text ubuntu-normal-white-24px">Tutors</div>
-            </div>
-            <div class="header-nav-item-4">
-                <div class="header-nav-item-4-text ubuntu-normal-white-24px">About Us</div>
-            </div>
-            <div class="header-nav-item-3">
-                <div class="header-nav-item-3-text ubuntu-normal-white-24px">Donation</div>
-            </div>
-            <div class="header-nav-item-2">
-                <div class="header-nav-item-2-text ubuntu-normal-white-24px">Sign Up</div>
-            </div>
-            <div class="header-nav-item-1">
-                <div class="header-nav-item-1-text ubuntu-normal-white-24px">Log In</div>
-            </div>
-        </div> -->
         <h1 class="header-title">Find Now Your Favourite Tutors &nbsp; Learn Anything</h1>
         <div class="header-sub-heading">Choose a subject tutor and master the skills</div>
         <div class="trusted-by-over-1000-students ubuntu-normal-white-24px">Trusted by over 1000+ students</div>
-        <a routerLink="/tutors">
-            <button class="header-cta" type="button">
-               Find a Tutor
-            </button>
-        </a>
-    
+        <button class="header-cta" (click)="search()" type="button">
+            Find a Tutor
+        </button>
+
         <div class="header-search-bar">
             <img class="header-search-bar-search-icon" src="assets/header-search-bar-search-icon@2x.svg" />
-            <input class="header-search-bar-placeholder" name="header-search-bar-placeholder"
-                placeholder="Search Your Subject" type="text" />
-            
+
+            <select [(ngModel)]="searchSubject" class="header-search-bar-placeholder"
+                name="header-search-bar-placeholder">
+                <option *ngFor="let subject of subjects">
+                    {{subject}}
+                </option>
+            </select>
         </div>
         <div class="header-stars">
             <div class="header-stars-star-5"><img class="vector-1" src="assets/vector@2x.svg" /></div>
@@ -52,10 +37,10 @@
     <div class="component-1 screen">
         <div class="explore-more-1"></div>
         <a routerLink="/donation">
-        <button class="explore-more-2" type ="button">
-            Explore More  
-       </button>
-    </a>
+            <button class="explore-more-2" type="button">
+                Explore More
+            </button>
+        </a>
         <div class="our-teaching-guidance">Our teaching guidance help our students to grow</div>
         <h1 class="title-1">We Are Providing Best Service To Our Students</h1>
         <div class="asset-1"><img class="asset-2" src="assets/asset-5-1@2x.png"

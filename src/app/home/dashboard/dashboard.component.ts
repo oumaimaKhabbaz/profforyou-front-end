@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatDialog} from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
 import { SigninComponent } from '../signin/signin.component';
 import { SignupComponent } from '../signup/signup.component';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -11,12 +13,30 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  subjects: String[] = [];
+  searchSubject: String = '';
 
-  constructor(public dialog: MatDialog, private router: Router) { }
+  constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) {
+    this.getSubjects();
+  }
 
   ngOnInit(): void {
   }
 
+  getSubjects() {
+    return this.http.get<any>('http://localhost:8080/subjects')
+      .subscribe({
+        next: data => {
+          console.log(data)
+          this.subjects = data;
+          return data;
+        },
+        error: error => {
+          console.error('There was an error!', error);
+        }
+      });
+
+  }
   openSignInDialog() {
     const dialogRef = this.dialog.open(SigninComponent);
 
@@ -37,5 +57,12 @@ export class DashboardComponent implements OnInit {
 
   about() {
     this.router.navigate(['about-us'])
+  }
+
+  search(){
+    if (this.searchSubject == '' || this.searchSubject == null){
+      this.searchSubject = 'all'
+    }
+    this.router.navigate(["/tutors"],  { queryParams: { subject: this.searchSubject }})
   }
 }
