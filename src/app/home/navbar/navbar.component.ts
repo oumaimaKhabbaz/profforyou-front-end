@@ -28,11 +28,8 @@ export class NavbarComponent implements OnInit {
   }
 
   signUp(){
-    const dialogRef = this.dialog.open(SignupComponent, {
-      width: '250px',
-      data: { name: this.name, animal: this.username }
-    });
-
+    const dialogRef = this.dialog.open(SignupComponent);
+  
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.username = result;

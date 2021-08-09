@@ -1,23 +1,46 @@
+<div class="login" id="mat-dialog">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Sign-up</h2>
+  <form class="login-container" [formGroup]="form" (ngSubmit)="createUser()">
 
-<div class="login">
-    <div class="login-triangle"></div>
-    
-    <h2 class="login-header">Sign-up</h2>
-  
-    <form class="login-container" (ngSubmit)= "createUser()">
-        
-        <p><input [formControl]="firstName" type="firstName" placeholder="First Name" required></p> 
-        
-        <p><input [formControl]="lastName" type="lastName" placeholder="Last Name" required></p> 
-      <p><input [formControl]="email" type="email" required placeholder="Email"></p> 
-      <div class="form-control-feedback"
-      *ngIf = "email.errors && (email.dirty || email.touched)">
-      <p *ngIf="email.errors.required">Email is required</p>
-      <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
+    <div class="form-group">
+      <div class="col-sm-12" [ngClass]="displayFieldCss('firstName')">
+        <label for="firstName" class="control-label">firstName</label>
+        <input type="text" id="firstName" class="form-control" formControlName="firstName">
+        <app-field-error-display [displayError]="isFieldValid('firstName')" errorMsg="Please inform your firstName">
+        </app-field-error-display>
+      </div>
     </div>
-      <p><input [formControl]="password" type="password" placeholder="Password"></p>
-    
-      <p><input type="submit" (click) =  "createUser()" value="Sign-up"></p>
- 
-    </form>
-  </div>
+
+    <div class="form-group">
+      <div class="col-sm-12">
+        <label for="lastName" class="control-label">lastName</label>
+        <input type="text" id="lastName" class="form-control" formControlName="lastName">
+        <app-field-error-display [displayError]="isFieldValid('lastName')" errorMsg="Please inform your lastName">
+        </app-field-error-display>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-12">
+        <label for="email" class="control-label">Email</label>
+        <input type="text" id="email" class="form-control" formControlName="email">
+        <app-field-error-display [displayError]="isFieldValid('email')" errorMsg="Please inform your email">
+        </app-field-error-display>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-12">
+        <label for="password" class="control-label">Password</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+        <app-field-error-display [displayError]="isFieldValid('password')" errorMsg="Please inform your password">
+        </app-field-error-display>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+      Sign-up
+    </button>
+  </form>
+</div>

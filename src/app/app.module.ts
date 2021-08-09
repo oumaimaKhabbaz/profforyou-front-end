@@ -66,6 +66,7 @@ import { TermsandconditionsComponent } from './termsandconditions/termsandcondit
 
 
 import { PaymentComponent } from './payment/payment.component';
+import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { PaymentComponent } from './payment/payment.component';
     TermsandconditionsComponent,
     DonationComponent,
    PaymentComponent,
-   TutorsComponent
+   TutorsComponent,
+   FieldErrorDisplayComponent
    
       
   ],
