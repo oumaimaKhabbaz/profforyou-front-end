@@ -1,4 +1,7 @@
 <div class="content grid-ctn">
+    <div *ngIf="profsLength==0">
+        <h1>no prof found!</h1>
+    </div>
     <div *ngFor="let prof of profs" class="card">
         <mat-card class="example-card" style="background-color: #ffff">
             <mat-card-header>
