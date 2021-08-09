@@ -5,18 +5,18 @@
     <div *ngFor="let prof of profs" class="card">
         <mat-card class="example-card" style="background-color: #ffff">
             <mat-card-header>
-                <mat-card-title>{{prof.name}}</mat-card-title>
+                <mat-card-title>{{prof.account.firstname}}</mat-card-title>
             </mat-card-header>
             <img mat-card-image src="https://www.superprof.co.uk/images/teachers/teacher-home-engaging-humorous-professional-and-qualified-computer-science-teacher-with-years-experience-offering-python-tutoring-online.jpg"
-                alt="Photo of {{prof.name}}">
+                alt="Photo of {{prof.account.firstname}}">
             <mat-card-content>
                 <span><mat-icon aria-hidden="false" aria-label="Example home icon">star</mat-icon> {{prof.rate}}</span>
                 <p>
-                    {{prof.profDescription}}
+                    {{prof.profResume.description}}
                 </p>
                 
                 <div fxLayout="row wrap">
-                    <span>{{prof.courseCost}}$ /hour  <mat-icon aria-hidden="false" aria-label="Example home icon">card_giftcard</mat-icon> 1st Lesson free</span> 
+                    <span>{{prof.hourlyPrice}}$ /hour  <mat-icon aria-hidden="false" aria-label="Example home icon">card_giftcard</mat-icon> 1st Lesson free</span> 
                 </div>
             </mat-card-content>
         </mat-card>
