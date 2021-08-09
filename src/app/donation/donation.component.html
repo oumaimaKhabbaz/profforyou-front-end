@@ -1,68 +1,71 @@
 <div>
     <div class="title-ctn">
-        <span></span>
+        <img src="/assets/background-title.png">
 
 
     </div>
-    <div class="description-donation">
-        <br>
-        <br>
-
-        <h1><span class="red">Prof</span>foryou is non-profit, non-corporate and non-compromised.<br> Thousands of
-            people like you help us stand up for helping <br>students in need for getting a laptop.<br> We rely on
-            donations to carry out our mission. Will you give today?</h1>
-    </div>
-
-    <div class="pay-ctn">
-        <h1 class="donate-title">Donation Details</h1>
-        <div class="cards">
-            <img src="/assets/credit_cards.png" alt="" srcset="">
-        </div>
-        <form class="pay-form">
-            <div class="form-line">
-                <label>Donation Amount</label>
-                <div class="edit">
-                    <div>
-                        <span>£ </span>
-                        <input class="amount" #amount value="{{amountValue | number : '1.2-2'}}" [readonly]="!isEditing"
-                            (keyup)="updateAmountIsValid(amount)">
-                    </div>
-                    <button type="button" (click)="editAmount(amount)" [disabled]="!amountIsValid">
-                        {{isEditing ? "Done" : "Edit"}}
-                    </button>
-                </div>
-            </div>
-            <div class="form-line">
-                <label for="name">Name on card</label>
-                <input id="name" name="name" type="text" (keyup)="updateCanPay()">
-            </div>
-            <div class="form-line">
-                <label for="cardno">Card number</label>
-                <input id="cardno" name="cardno" type="text" maxlength="19" (keydown)="adaptCardNo($event)"
-                    (keyup)="updateCanPay()">
-            </div>
-            <div class="form-line-double">
-                <label for="expiry">Expiry date</label>
-                <label for="seccode">Security code</label>
-                <input id="expiry" class="date" name="expiry" type="text" placeholder="MM / YY" maxlength="7"
-                    (keydown)="adaptExpiration($event)" (keyup)="updateCanPay()">
-                <input id="seccode" type="number" name="seccode" maxlength="6" (keyup)="updateCanPay()">
-            </div>
-            <div class="form-line">
-                <label for="zip">Zip/Postal code</label>
-                <input id="zip" name="zip" type="text" (keyup)="updateCanPay()">
-            </div>
-            <button class="pay-btn" [disabled]="isEditing || canPay" (click)="pay">
-                <img src="/assets/lock.png"> -->
-                <span> &nbsp; Pay £ {{amountValue | number : '1.2-2'}}</span>
-            </button>
-        </form>
-        <div *ngIf="paymentSuccessful" class="ok-message grid-overleap">
-            <h2>Payment Successful</h2>
-            <p>
-                Your payment has been successfully completed!
-            </p>
-            <img src="/assets/ok.png" class="ok-icon">
-        </div>
     
+    <div class="grid-ctn">
+        <h1>
+            <span class="red">Prof</span>foryou is non-profit, non-corporate and non-compromised.
+            <br> 
+            Thousands of people like you help us stand up for helping 
+            <br>
+            students in need for getting a laptop.
+            <br> 
+            We rely on donations to carry out our mission. Will you give today?
+        </h1>
+        <div class="pay-ctn">
+            <form class="pay-form grid-overleap">
+                <h1 class="donate-title">Donation Details</h1>
+                <div class="cards">
+                    <img src="/assets/credit_cards.png" alt="" srcset="">
+                </div>
+                <div class="form-line">
+                    <label>Donation Amount</label>
+                    <div class="edit">
+                        <div>
+                            <span>£ </span>
+                            <input class="amount" #amount value="{{amountValue | number : '1.2-2'}}" [readonly]="!isEditing"
+                                (keyup)="updateAmountIsValid(amount)">
+                        </div>
+                        <button type="button" (click)="editAmount(amount)" [disabled]="!amountIsValid">
+                            {{isEditing ? "Done" : "Edit"}}
+                        </button>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <label for="name">Name on card</label>
+                    <input id="name" name="name" type="text" (keyup)="updateCanPay()">
+                </div>
+                <div class="form-line">
+                    <label for="cardno">Card number</label>
+                    <input id="cardno" name="cardno" type="text" maxlength="19" (keydown)="adaptCardNo($event)"
+                        (keyup)="updateCanPay()">
+                </div>
+                <div class="form-line-double">
+                    <label for="expiry">Expiry date</label>
+                    <label for="seccode">Security code</label>
+                    <input id="expiry" class="date" name="expiry" type="text" placeholder="MM / YY" maxlength="7"
+                        (keydown)="adaptExpiration($event)" (keyup)="updateCanPay()">
+                    <input id="seccode" type="number" name="seccode" maxlength="6" (keyup)="updateCanPay()">
+                </div>
+                <div class="form-line">
+                    <label for="zip">Zip/Postal code</label>
+                    <input id="zip" name="zip" type="text" (keyup)="updateCanPay()">
+                </div>
+                <button class="pay-btn" [disabled]="isEditing || canPay" (click)="pay()">
+                    <img src="/assets/lock.png">
+                    <span> &nbsp; Pay £ {{amountValue | number : '1.2-2'}}</span>
+                </button>
+            </form>
+            <div *ngIf="paymentSuccessful" class="ok-message grid-overleap">
+                <h2>Payment Successful</h2>
+                <p>
+                    Your payment has been successfully completed!
+                </p>
+                <!-- <img src="/assets/ok.png" class="ok-icon"> -->
+            </div>
+    </div>
+</div>
 </div>

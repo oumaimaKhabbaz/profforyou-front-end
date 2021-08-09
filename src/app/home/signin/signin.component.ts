@@ -10,11 +10,14 @@ import { Observable, throwError } from 'rxjs';
 })
 export class SigninComponent implements OnInit {
   email = new FormControl('', [Validators.required,
-      Validators.pattern("[^@]*@[^@]*")
+      Validators.pattern("[^@]@[^@]")
      ]);// dataBinding // one way binding
-  password = new FormControl('', [Validators.required,
-  Validators.minLength(8)
-]);
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(8)
+  ]);
+
+  passwordIsForgotten: boolean = false;
 
 
 
@@ -36,10 +39,10 @@ export class SigninComponent implements OnInit {
     return this.http.post<any>("http://localhost:8080/users", {
       "email": this.email.value, "password": this.password.value
 
-    })
+    })  
       .subscribe({
         next: data => {
-
+          
         },
         error: error => {
           console.error('There was an error!', error);
@@ -49,7 +52,7 @@ export class SigninComponent implements OnInit {
   
   
 
-  forgotPasword() {
-
+  forgotPassword() {
+    this.passwordIsForgotten = true;
   }
 }

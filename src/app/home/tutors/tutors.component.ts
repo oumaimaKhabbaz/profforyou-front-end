@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfModel } from 'src/app/shared/model/profSearch';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -102,9 +103,10 @@ export class TutorsComponent implements OnInit {
       'firstLessonOffer':true
     },
   ];
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    
   }
 
 }

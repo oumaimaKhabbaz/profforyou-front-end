@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   getSubjects() {
     return this.http.get<any>('http://localhost:8080/subjects')
       .subscribe({
@@ -37,6 +38,12 @@ export class DashboardComponent implements OnInit {
       });
 
   }
+
+  redirectToTutors(){
+    this.router.navigate(['/tutors']);
+  }
+
+
   openSignInDialog() {
     const dialogRef = this.dialog.open(SigninComponent);
 

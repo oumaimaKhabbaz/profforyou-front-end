@@ -41,7 +41,7 @@
             <label for="zip">Zip/Postal code</label>
             <input id="zip" name="zip" type="text" (keyup)="updateCanPay()">
         </div>
-        <button class="pay-btn" [disabled]="isEditing || canPay" (click)="pay">
+        <button class="pay-btn" [disabled]="isEditing || canPay" (click)="pay()">
             <img src="/assets/lock.png">
             <span> &nbsp; Pay £ {{amountValue | number : '1.2-2'}}</span>
         </button>

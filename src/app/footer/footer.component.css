@@ -1,3 +1,7 @@
+:host a {
+    color: #000;
+    
+}
 mat-grid-tile {
     background: #ffff;
     
@@ -72,3 +76,4 @@ button{
 justify-content: space-around;
 width: 450px;
 }
+/* responsiveness */

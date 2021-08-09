@@ -30,12 +30,11 @@ input[type=text], select, textarea {
 
   .form-group{
    
-    background-color: #f2f2f2; 
     padding: 40px 12px; 
-    padding-bottom:59px;
+   
     border-radius: 10px;
     cursor: pointer;
-    margin-right:871px;
+    padding-left:59px;
     margin-left: 87px;
     display:flex;
     flex-direction: column;
@@ -45,25 +44,42 @@ input[type=text], select, textarea {
 
   
   .btn btn-primary hover {
-    background-color: #000;
+    background-color: #b30000;
 
+  }
+  .btn btn-primary{
+    margin-left:235px;
   }
 
   input[type=text], select, textarea {
     width: 400px;
     border-radius: 5px;
-    margin-left:40px;
+  border:solid 1px black;
   
   }
     .form-control{
 
      color: #ffff; 
     padding: 12px 20px; 
-    border: none;
+   
     border-radius: 10px;
     cursor: pointer;
     margin-right:100px;
-    margin-left: 30px;
+   
     display:flex;
     flex-direction: column; 
   }    
+
+.help-form input{
+
+  width: 400px;
+  border-radius: 5px;
+  margin-left: 0;
+  border: solid 1px black;
+}
+
+
+
+.help-form {
+  margin-top: 200px;
+}

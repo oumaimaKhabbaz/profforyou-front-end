@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,6 +11,12 @@ export class ForgotPasswordComponent implements OnInit {
 
   text = new FormControl('');
 
+  email = new FormControl('', [
+    Validators.required,
+    Validators.pattern("[^@]@[^@]")
+   ]);// dataBinding // one way binding
+
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -19,5 +25,6 @@ export class ForgotPasswordComponent implements OnInit {
     console.log(this.text.value)
 
 }
+sent = false;
 }
 
