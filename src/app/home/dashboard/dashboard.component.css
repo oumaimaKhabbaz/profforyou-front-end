@@ -706,6 +706,19 @@ section.subject {
     flex-direction: column;
   }
 
+  .header-search-bar-ctn > .header-cta {
+    width: 200px;
+    margin-left: 20px;
+    color: #fff;
+    background-color: #B30000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #00000040;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    height: 54px;
+  }
+
   .header.screen {
     --color: gray;
     padding: 0;

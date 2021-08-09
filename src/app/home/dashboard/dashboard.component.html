@@ -10,37 +10,39 @@
         <h1 class="header-title">Find Now Your Favourite Tutors &nbsp; Learn Anything</h1>
         <div class="header-sub-heading">Choose a subject tutor and master the skills</div>
         <div class="trusted-by-over-1000-students ubuntu-normal-white-24px">Trusted by over 1000+ students</div>
-        <button class="header-cta" (click)="search()" type="button">
-            Find a Tutor
-        </button>
 
-        <div class="header-search-bar">
-            <img class="header-search-bar-search-icon" src="assets/header-search-bar-search-icon@2x.svg" />
+        <div class="header-search-bar-ctn">
+            <div class="header-search-bar">
+                <img class="header-search-bar-search-icon" src="assets/header-search-bar-search-icon@2x.svg" />
 
-            <select [(ngModel)]="searchSubject" class="header-search-bar-placeholder"
-                name="header-search-bar-placeholder">
-                <option *ngFor="let subject of subjects">
-                    {{subject}}
-                </option>
-            </select>
+                <select [(ngModel)]="searchSubject" class="header-search-bar-placeholder"
+                    name="header-search-bar-placeholder">
+                    <option *ngFor="let subject of subjects">
+                        {{subject}}
+                    </option>
+                </select>
 
-            <!--  <div class="header-logo">
-        </div> 
+            </div>
+            <button class="header-cta" (click)="search()">
+                Find a Tutor
+            </button>
+        </div>
+        <!--  <div class="header-logo">
+        </div>
         <h1 class="header-title">Find Now Your Favourite Tutors Learn Anything</h1>
         <div class="header-sub-heading">Choose a subject tutor and master the skills</div>
-        
+
         <div class="header-search-bar-ctn">
             <div class="header-search-bar">
                 <img class="header-search-bar-search-icon" src="assets/header-search-bar-search-icon@2x.svg" />
                 <input class="header-search-bar-placeholder" name="header-search-bar-placeholder"
-                       placeholder="Search Your Subject" type="text" 
+                       placeholder="Search Your Subject" type="text"
                 >
             </div>
             <button class="header-cta" type="button" (click)="redirectToTutors()">
                 Find a Tutor
             </button> -->
 
-        </div>
         <div class="stars-trusted-ctn">
             <div class="trusted-by-over-1000-students ubuntu-normal-white-24px">Trusted by over 1000+ students</div>
             <div class="header-stars">
@@ -59,22 +61,12 @@
     <div class="service-info flex-col">
         <h1 class="title">We Are Providing Best Service To Our Students</h1>
         <div class="sub-title">Our teaching guidance help our students to grow</div>
-        <a routerLink="/donation">
-
-            <!-- <button class="explore-more-2" type="button">
-                Explore More
-            </button> -->
-        </a>
         <div class="our-teaching-guidance">Our teaching guidance help our students to grow</div>
-        <h1 class="title-1">We Are Providing Best Service To Our Students</h1>
-        <div class="asset-1"><img class="asset-2" src="assets/asset-5-1@2x.png">
-
-            <button type="button">
+        <a routerLink="/donation">
+            <button class="explore-more-2">
                 Explore More
             </button>
-
-
-        </div>
+        </a>
     </div>
 </section>
 <section class="subject">
