@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProfModel } from 'src/app/shared/model/profSearch';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import {LocalStorageService} from 'ngx-localstorage';
 
 
 
@@ -28,11 +27,8 @@ export class TutorsComponent implements OnInit {
 
   searchTutors(subject :String) {
     let url = 'http://localhost:8080/prof/search?subject=';
-    const headers = new HttpHeaders()
-    .set('content-type', 'application/json')
-    .set('authorization', 'Bearer '+ this.getToken());
  
-    this.http.get<any>(url + subject, {'headers': headers})
+    this.http.get<any>(url + subject)
     .subscribe({
       next: data => {
         this.profs = data
@@ -42,10 +38,6 @@ export class TutorsComponent implements OnInit {
         console.error('There was an error!', error);
       }
     });
-  }
-
-  getToken(){
-    return this._storageService.get("token");
   }
 
 }
