@@ -4,7 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchformComponent } from './searchform/searchform.component';
 
 import { AboutComponent } from './about/about.component';
-import { TutorsComponent } from './tutors/tutors.component';
+
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'
@@ -58,7 +58,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     NavbarComponent,
     SearchformComponent,
     AboutComponent,
-    TutorsComponent,
+   
   ],
   imports: [
     MatToolbarModule,

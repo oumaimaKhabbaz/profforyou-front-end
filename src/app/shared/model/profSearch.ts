@@ -6,6 +6,7 @@ export interface ProfModel{
     hourlyPrice: number;
     profResume: ProfResume;
     account:Account;
+    reviews: Review[],
     rate: number;
     nbrOfReviews: number;
     teachingMethod:String;
@@ -35,5 +36,11 @@ export interface Account{
     password: string;
     email: string;
    // need to add firstlessonfree
+}
 
+export interface Review{
+    rate: string;
+    review: string;
+    reviewer: Account;
+   // need to add firstlessonfree
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import {LocalStorageService} from 'ngx-localstorage';
 
 @Component({
   selector: 'app-signin',
@@ -19,9 +19,7 @@ export class SigninComponent implements OnInit {
 
   passwordIsForgotten: boolean = false;
 
-
-
-  constructor(private http: HttpClient) { } // http client
+  constructor(private http: HttpClient, private _storageService: LocalStorageService) { } // http client
 
 
   ngOnInit(): void {
@@ -34,20 +32,25 @@ export class SigninComponent implements OnInit {
   }
 
 
-  createUser() {
+  login() {
     console.log("button is clicked")
-    return this.http.post<any>("http://localhost:8080/users", {
+    return this.http.post<any>("http://localhost:8080/login", {
       "email": this.email.value, "password": this.password.value
-
-    })  
-      .subscribe({
-        next: data => {
-          
-        },
-        error: error => {
-          console.error('There was an error!', error);
+    }).subscribe({
+      next: data => {
+        console.log(data)
+        if (data != null) {
+          console.log(data);
+          this._storageService.set('token', data.AUTHORIZATION);
+          console.log(this._storageService.get('token'))
+        }else{
+          console.error('Accoutnt was not correctly created!');
         }
-      });
+      },
+      error: error => {
+        console.error('There was an error!', error);
+      }
+    });  
   }
   
   

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfModel } from 'src/app/shared/model/profSearch';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+
 
 
 
@@ -13,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 export class TutorsComponent implements OnInit {
   profsLength :number= 0;
   profs: Array<ProfModel> =[];
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.queryParams
@@ -26,6 +28,7 @@ export class TutorsComponent implements OnInit {
 
   searchTutors(subject :String) {
     let url = 'http://localhost:8080/prof/search?subject=';
+ 
     this.http.get<any>(url + subject)
     .subscribe({
       next: data => {

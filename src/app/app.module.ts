@@ -64,11 +64,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
+import {NgxLocalStorageModule} from 'ngx-localstorage';
 
 
 import { PaymentComponent } from './payment/payment.component';
 import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
+
 import { MessagesComponent } from './messages/messages.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 
 @NgModule({
@@ -90,7 +95,12 @@ import { MessagesComponent } from './messages/messages.component';
     TutorsComponent,
     FieldErrorDisplayComponent,
     DashboardComponent,
-    MessagesComponent
+
+    MessagesComponent,
+
+    SubscriptionComponent,
+    ProfileComponent
+
   ],
   imports: [
     BrowserModule,
@@ -103,6 +113,7 @@ import { MessagesComponent } from './messages/messages.component';
     MatIconModule,
     MatButtonModule,
     MatTableModule,
+    MatListModule,
     MatDividerModule,
     MatGridListModule,
     MatSlideToggleModule,
@@ -112,7 +123,8 @@ import { MessagesComponent } from './messages/messages.component';
     ReactiveFormsModule,
     FlexLayoutModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxLocalStorageModule.forRoot(),
   ],
   exports: [
     A11yModule,

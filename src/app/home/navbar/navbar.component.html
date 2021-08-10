@@ -38,7 +38,7 @@
   </div> 
   <div class="sidenav" *ngIf="menuIsOpen" (click)="this.menuIsOpen = false">
     <div class="sidenav-list">
-      <a routerLink="/tutors">Tutors</a>
+      <a routerLink="/tutors?subject=all">Tutors</a>
       <a routerLink="/about">About Us</a>
       <a routerLink="/donation">Donation</a>
       <a *ngIf="isAuthenticated" routerLink="/profile">My profile</a>

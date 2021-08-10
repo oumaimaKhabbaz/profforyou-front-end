@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './home/signup/signup.component';
- import { SigninComponent } from './home/signin/signin.component';
+import { SigninComponent } from './home/signin/signin.component';
 import { AboutComponent } from './home/about/about.component';
 import { HelpComponent } from './help/help.component';
 import { SearchformComponent } from './home/searchform/searchform.component';
@@ -14,6 +14,9 @@ import { TermsandconditionsComponent } from './termsandconditions/termsandcondit
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DonationComponent } from './donation/donation.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 
 const routes: Routes = [
@@ -28,8 +31,19 @@ const routes: Routes = [
   },
 
   {
+    path: 'profile',
+    component: ProfileComponent
+  },
+
+  {
     path: 'about',
     component: AboutComponent
+  },
+
+  
+  {
+    path: 'subscribe',
+    component: SubscriptionComponent
   },
 
   {
@@ -59,7 +73,7 @@ const routes: Routes = [
   
   },
   {
-    path: 'tutors',
+    path: 'tutors?subject=all',
     component:TutorsComponent
   },
 
@@ -87,6 +101,7 @@ const routes: Routes = [
     path:'messages',
     component: MessagesComponent
   },
+
   
 ];
 
