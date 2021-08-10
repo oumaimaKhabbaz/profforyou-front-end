@@ -1,5 +1,5 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
-    height: 100%;
+    height: var(--navbar-height);
     position: fixed;
 }
 mat-sidenav {
@@ -48,8 +48,6 @@ a:hover, a:active{
     position: absolute;
     top:0;
     z-index: 2;
-    
-
 }
 .bg-transparent *{
     color:#ffffff;
@@ -172,4 +170,25 @@ a:hover, a:active{
         width: 400px;
     }
    
+}
+
+.gray-bg {
+    background-color: gray;
+    width: 100%;
+    height: var(--navbar-height);
+    position: absolute;
+    z-index: -3;
+}
+
+
+:host {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    --navbar-height: 64px;
+}
+
+:host > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
 }

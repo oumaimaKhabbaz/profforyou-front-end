@@ -6,10 +6,26 @@ body {
 }
 
 .login {
-  width: 220px;
+  width: 300px;
   margin: 16px auto;
   font-size: 16px;
+  padding:90px;
+  box-shadow: 2px 2px 16px -7px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px auto;
+  
  
+}
+
+
+@media screen and (max-width: 480px) {
+  .login {
+    width: 100%;
+    box-shadow: none;
+    padding: 50px 0;
+  }
 }
 
 /* Reset top and bottom margins from certain elements */
@@ -20,15 +36,7 @@ body {
 
 }
 
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: #b30000;
-  color:#b30000;
-}
+
 
 .login-header {
   background: #b30000;
@@ -41,13 +49,13 @@ body {
   padding-right: 61px;
   padding-left:40px;
   width:149px;
-  margin-left: -24px;
+  
 }
 
 .login-container {
   background: #ffff;
   padding: 12px;
-margin-left:-24px;
+
   
 }
 
@@ -104,4 +112,13 @@ margin-left:-24px;
 }
 .forgot-password {
 margin-left: 74px;
+}
+
+
+.login .email:invalid {
+  border:solid 2px #b30000;
+}
+
+.login .password:invalid {
+  border:solid 2px #b30000;
 }

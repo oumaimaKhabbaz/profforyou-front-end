@@ -10,7 +10,9 @@
     grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
-    padding-top: 300px;
+  
+
+    
   
 }
 
@@ -27,7 +29,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 3px 5px 14px -5px;*/
-    margin: 30px; 
+ margin: 700px auto; 
     width: fit-content;
     max-width: 400px;
     display: grid;
@@ -151,7 +153,7 @@ input.date {
  
 .title-ctn{
     
-      height: 450px; 
+      height: 300px; 
      width:100%;
      background-repeat: no-repeat;
 

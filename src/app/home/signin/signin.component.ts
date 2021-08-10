@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import {LocalStorageService} from 'ngx-localstorage';
+import { LocalStorageService } from 'ngx-localstorage';
 import { Router } from '@angular/router';
 import { ThisReceiver } from '@angular/compiler';
 
@@ -12,18 +12,20 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class SigninComponent implements OnInit {
   email = new FormControl('', [Validators.required,
-      Validators.pattern("[^@]@[^@]")
-     ]);// dataBinding // one way binding
+  Validators.pattern("[^@]@[^@]")
+  ]);// dataBinding // one way binding
   password = new FormControl('', [
     Validators.required,
     Validators.minLength(8)
   ]);
 
   passwordIsForgotten: boolean = false;
+  subscription: boolean = false;
 
-  constructor(private http: HttpClient, 
+
+  constructor(private http: HttpClient,
     private _storageService: LocalStorageService,
-    private router:Router) { } // http client
+    private router: Router) { } // http client
 
 
   ngOnInit(): void {
@@ -46,20 +48,43 @@ export class SigninComponent implements OnInit {
           console.log(data);
           this._storageService.set('token', data.AUTHORIZATION);
           console.log(this._storageService.get('token'))
-          this.router.navigate( ['home']);
-        }else{
+          this.checkProfSubscription(this.email.value)
+          if (this.subscription) {
+            this.router.navigate(['home']);
+          }
+          else {
+            this.router.navigate(['subscribe']);
+          }
+
+
+        } else {
           console.error('Accoutnt was not correctly created!');
         }
       },
       error: error => {
         console.error('There was an error!', error);
       }
-    });  
+    });
   }
-  
-  
+
+
 
   forgotPassword() {
     this.passwordIsForgotten = true;
+  }
+
+  checkProfSubscription(email: String) {
+    this.http.get<any>("http://localhost:8080/prof/" + email
+    ).subscribe({
+      next: data => {
+        console.log(data)
+        if (data.subscibtion != null) {
+          this.subscription = true;
+        }
+      },
+      error: error => {
+        console.error('There was an error!', error);
+      }
+    });
   }
 }

@@ -9,6 +9,20 @@ body {
   width: 300px;
   margin: 16px auto;
   font-size: 16px;
+  padding:90px;
+  box-shadow: 2px 2px 16px -7px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px auto;
+
+}
+@media screen and (max-width: 480px) {
+  .login {
+    width: 100%;
+    box-shadow: none;
+    padding: 50px 0;
+  }
 }
 
 /* Reset top and bottom margins from certain elements */
@@ -19,35 +33,26 @@ body {
 
 }
 
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: 95px;
-  border: 12px solid transparent;
-  border-bottom-color:#b30000;
-}
+
 
 .login-header {
   background: #b30000;
-  padding: 10px; 
+  padding: 19px;
   font-size: 1.4em;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  padding-right: 71px;
-  margin-left: -24px;
-  /* padding-right: 65px; */
-  /* padding-left:40px; */
-  justify-content: center;;
-margin-right:12px;
+  padding-right: 61px;
+  padding-left:40px;
+  width:149px;
+
 }
 
 .login-container {
   background: #ffff;
   padding: 12px;
-  margin-left:-19px;
+
 }
 
 /* Every row inside .login-container is defined with p tags */
@@ -58,16 +63,15 @@ margin-right:12px;
 .login input {
   box-sizing: border-box;
   display: block;
-  /* width: 100%; */
+   width: 100%; 
   border-width: 1px;
   border-style: solid;
   padding: 16px;
   outline: 0;
   font-family: inherit;
   font-size: 0.95em;
-  width:233px;
-  margin-left: -19px;
-  margin-right: 70px;
+
+ 
 }
 
 .login input[type="email"],
@@ -88,9 +92,12 @@ margin-right:12px;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
-  padding-right: 110px;
+  padding-right: 32px;
+  font-size: 20px;
   border-radius: 10px;
-  padding-left: 84px;
+  padding-left: 26px;
+  width: 161px;
+  margin-left: 14px;
 }
 
 .login input[type="submit"]:hover {

@@ -1,11 +1,11 @@
 <div class="login" *ngIf="!passwordIsForgotten">
-  <div class="login-triangle"></div>
+  <!-- <div class="login-triangle"></div> -->
 
-  <h2 class="login-header">Sign-in</h2>
+   <h2 class="login-header">Sign-in</h2> 
 
   <form class="login-container" (ngSubmit)="login()">
 
-      <p><input [formControl]="email" type="email" placeholder="Email"></p>
+      <p><input class="email" [formControl]="email" type="email" placeholder="Email"></p>
       <div class="form-control-feedback"
       *ngIf = "email.errors && (email.dirty || email.touched)">
   
