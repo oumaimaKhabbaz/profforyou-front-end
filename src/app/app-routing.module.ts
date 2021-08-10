@@ -14,6 +14,7 @@ import { TermsandconditionsComponent } from './termsandconditions/termsandcondit
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DonationComponent } from './donation/donation.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SigninComponent
+  },
+
+  {
+    path: 'profile',
+    component: ProfileComponent
   },
 
   {

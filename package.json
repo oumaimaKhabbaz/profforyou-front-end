@@ -23,6 +23,7 @@
     "@angular/router": "~12.0.5",
     "awesome": "0.0.7",
     "font": "0.0.4",
+    "ngx-localstorage": "^3.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"

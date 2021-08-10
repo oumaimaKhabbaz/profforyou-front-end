@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
   }
 
   createUser() {
-    const url =  "http://localhost:8080/users";
+    const url =  "http://localhost:8080/account/register";
     if (this.form.valid) {
       console.log('form submitted');
       return this.http.post<any>( url, {

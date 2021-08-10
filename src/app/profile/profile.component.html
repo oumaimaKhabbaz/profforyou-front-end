@@ -1,0 +1,139 @@
+<div class="pofile">
+    <div class="profile nav profile image">
+        <img src="" />
+    </div>
+    <mat-card>
+        <div class="profile nav profile details">
+            <div>
+                <h3 class="city">{{prof.city}}</h3>
+            </div>
+            <div>
+                <h3 class="firstname">{{prof.account.firstname}}</h3>
+                <span>
+                    <mat-icon aria-hidden="false" aria-label="favorite icon">favorite</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="share icon">share</mat-icon>
+                </span>
+            </div>
+            <div>
+                <span>level</span>
+                <span>start </span>
+                <span>{{totalReviews}}</span>
+            </div>
+        </div>
+        <div class="prof-class-details">
+            <div class="preise">
+                <h3>{{prof.hourlyPrice}}</h3>
+                <button class="info-icon">book class</button>
+                <div class="course-offer">
+                    1 free course-offer
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <div>
+                <div class="left">
+                    <mat-card>
+                        <mat-list-item>
+                            Profile and degree verified
+                            <span>checked-icon</span>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                            Response Time
+                            <span> 4h</span>
+                        </mat-list-item>
+                    </mat-card>
+                    <mat-card>
+                        <div class="card courses levels">
+                            <mat-card-title>Lessons offered by Paolo</mat-card-title>
+                            <div class="lesson-type">
+                                <span *ngFor="let ltype of prof.lessonType">
+                                    <button mat-button color="accent">{{ltype}}</button>
+                                </span>
+                            </div>
+                            <mat-card-title>The lessons will be held</mat-card-title>
+                            <div class="teaching-metods">
+                                <span *ngFor="let tmethod of prof.teachMethod">
+                                    <button mat-button color="accent">{{tmethod}}</button>
+                                </span>
+                            </div>
+                            <mat-card-title>Taught subjects</mat-card-title>
+                            <div class="teaching-subjects">
+                                <span *ngFor="let subject of prof.subjects">
+                                    <button mat-button color="accent">{{subject}}</button>
+                                </span>
+                            </div>
+                            <mat-card-title>Levels</mat-card-title>
+                            <div class="teaching-levels">
+                                <span *ngFor="let level of prof.levels">
+                                    <button mat-button color="accent">{{level}}</button>
+                                </span>
+                            </div>
+                        </div>
+                    </mat-card>
+
+                </div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="profile-container profile-grid">
+                <div class="right">
+                    <mat-card>
+                        <div class="resume">
+                            <mat-card-title>
+                                <h1> {{prof.profResume.title}}</h1>
+                            </mat-card-title>
+                            <mat-card-title>
+                                <h1> {{prof.profResume.subTitle}}</h1>
+                            </mat-card-title>
+                            <mat-card-content>
+                                <div>
+                                    <p>
+                                        {{prof.profResume.description}}
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div>
+        <div class="reviews">
+            <mat-card>
+                <div class="review-card header">
+                    <div>
+                        <mat-card-title> reviews on {{prof.account.firstname}}</mat-card-title>
+                    </div>
+                    <p>All our ratings are collected by us and are given in confidence, they correspond to a real
+                        experience.</p>
+                </div>
+            </mat-card>
+
+            <div class="review-card body">
+                <ul *ngFor="let review of prof.reviews">
+                    <mat-card>
+                        <mat-grid-list cols="2" rowHeight="2:1">
+                            <mat-grid-tile>
+                                <div class="reviewer">
+                                    <div> circle intials</div>
+                                    <span>{{review.reviewer.firstname}}</span>
+                                    <p>{{review.rate}}</p>
+                                </div>
+                            </mat-grid-tile>
+                            <mat-grid-tile>
+                                <div class="review-comment">
+                                    {{review.review}}}
+                                </div>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </mat-card>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
