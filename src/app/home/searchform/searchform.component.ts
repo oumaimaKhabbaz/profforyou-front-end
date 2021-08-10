@@ -5,6 +5,7 @@ import { SearchService } from 'src/app/shared/services/search.service';
 import { ProfModel } from 'src/app/shared/model/profSearch';
 
 
+
 @Component({
   selector: 'app-searchform',
   templateUrl: './searchform.component.html',
@@ -15,7 +16,8 @@ export class SearchformComponent implements OnInit {
   subject= new FormControl('');
   profs: Array<ProfModel> = []; //profsearch
 
-  constructor(private searchService: SearchService) { }
+  constructor(private searchService: SearchService) {
+   }
    
   ngOnInit(): void {
 

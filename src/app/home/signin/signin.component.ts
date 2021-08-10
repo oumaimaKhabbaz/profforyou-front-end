@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import {LocalStorageService} from 'ngx-localstorage';
+import { Router } from '@angular/router';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-signin',
@@ -19,7 +21,9 @@ export class SigninComponent implements OnInit {
 
   passwordIsForgotten: boolean = false;
 
-  constructor(private http: HttpClient, private _storageService: LocalStorageService) { } // http client
+  constructor(private http: HttpClient, 
+    private _storageService: LocalStorageService,
+    private router:Router) { } // http client
 
 
   ngOnInit(): void {
@@ -30,7 +34,6 @@ export class SigninComponent implements OnInit {
     console.log(this.email.value + " " + this.password.value)
 
   }
-
 
   login() {
     console.log("button is clicked")
@@ -43,6 +46,7 @@ export class SigninComponent implements OnInit {
           console.log(data);
           this._storageService.set('token', data.AUTHORIZATION);
           console.log(this._storageService.get('token'))
+          this.router.navigate( ['home']);
         }else{
           console.error('Accoutnt was not correctly created!');
         }

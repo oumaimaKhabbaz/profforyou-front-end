@@ -73,7 +73,7 @@ const routes: Routes = [
   
   },
   {
-    path: 'tutors?subject=all',
+    path: 'tutors',
     component:TutorsComponent
   },
 
