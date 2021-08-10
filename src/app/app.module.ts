@@ -68,6 +68,7 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 
 import { PaymentComponent } from './payment/payment.component';
 import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { FieldErrorDisplayComponent } from './field-error-display/field-error-di
     PaymentComponent,
     TutorsComponent,
     FieldErrorDisplayComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

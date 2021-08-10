@@ -1,0 +1,13 @@
+<div class="chat-ctn">
+    <div class="chat" #chat [scrollTop]="chat.scrollHeight">
+        <div class="message" [ngClass]="message.author === 'user' ? 'right' : ''" *ngFor="let message of messages">
+            {{message.text}}
+        </div>
+    </div>
+    <div class="new-text">
+        <div class="input" contenteditable #input (keydown)="sendMessageIfEnterIsPressed($event, input)"></div>
+        <button (click)="sendMessage(input)">
+            Send
+        </button>
+    </div>
+</div>

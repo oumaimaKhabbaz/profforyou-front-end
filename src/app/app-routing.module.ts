@@ -13,6 +13,7 @@ import { TutorsComponent } from './home/tutors/tutors.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DonationComponent } from './donation/donation.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 const routes: Routes = [
@@ -79,7 +80,13 @@ const routes: Routes = [
      path:'payment',
      component: PaymentComponent
    },
+   
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
+
+  {
+    path:'messages',
+    component: MessagesComponent
+  },
   
 ];
 
