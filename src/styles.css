@@ -2,7 +2,6 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.login-container.ng-touched.ng-invalid{
-    border-left: 5px solid red;
+.navbar-room{
+    height: 100px;
 }

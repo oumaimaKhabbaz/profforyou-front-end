@@ -1,31 +1,34 @@
-<div class="login" *ngIf="!passwordIsForgotten">
-  <!-- <div class="login-triangle"></div> -->
+<div class="login">
 
-   <h2 class="login-header">Sign-in</h2> 
-
-  <form class="login-container" (ngSubmit)="login()">
-
-      <p><input class="email" [formControl]="email" type="email" placeholder="Email"></p>
-      <div class="form-control-feedback"
-      *ngIf = "email.errors && (email.dirty || email.touched)">
+  <ng-container *ngIf="!passwordIsForgotten">
   
-      <p *ngIf="email.errors.required">Email is required</p>
-      <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
-      
+    <h2 class="login-header">Sign-in</h2>
+  
+    <form class="login-container" (ngSubmit)="login()">
+  
+        <p><input class="email" oninvalid="setCustomValidity('Invalid email')" 
+                  [formControl]="email" type="email" placeholder="Email"></p>
+        <div class="form-control-feedback"
+        *ngIf = "email.errors && (email.dirty || email.touched)">
+    
+        <p *ngIf="email.errors.required">Email is required</p>
+        <p *ngIf="email.errors.pattern"> The email address must contain at least the @ character</p>
+        
+      </div>
+        <p><input [formControl]="password" type="password" placeholder="Password" required></p>
+        
+          <div class="forgot-password ">
+        <p>
+          <button (click)="forgotPassword()" type="button">
+            forgot password ?
+          </button>
+        </p>
     </div>
-      <p><input [formControl]="password" type="password" placeholder="Password" required></p>
-      
-        <div class="forgot-password ">
-      <p>
-        <button (click)="forgotPassword()" type="button">
-          forgot password ?
-        </button>
-      </p>
-  </div>
-
-      <p><input type="submit" value="Sign-in"></p>
   
-  </form>
-</div>
+        <p><input type="submit" value="Sign-in"></p>
+    
+    </form>
+  </ng-container>
 
-<app-forgot-password *ngIf="passwordIsForgotten"></app-forgot-password>
+  <app-forgot-password *ngIf="passwordIsForgotten"></app-forgot-password>
+</div>

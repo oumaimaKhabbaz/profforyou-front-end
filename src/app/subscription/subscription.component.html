@@ -1,5 +1,4 @@
-<div   fxLayout="row" fxLayoutAlign="space-around center">
-
+<!-- <div   fxLayout="row" fxLayoutAlign="space-around center">
     <div flex>
         try it for freee
         1 week
@@ -19,6 +18,67 @@
     <div flex>
         12 month subscription
         price 10 /monh
+        <button (click)="subscribeOneYear()">subscribe</button>
+    </div>
+</div> -->
+<div class="subscriptions-ctn">
+    <div class="subscription red">
+        <img src="">
+        <div class="info">
+            <br>
+            <span class="title">Trial</span>
+            <hr>
+            <span class="cost">Free</span>
+        </div>
+        <p>
+            try it for free
+            <br>
+            1 week
+        </p>
+        <button> try for free </button>
+    </div>
+
+    <div class="subscription blue">
+        <img src="">
+        <div class="info">
+            <span class="title">3 Month Subscription</span>
+            <hr>
+            <span class="cost">20£ / month</span>
+        </div>
+        <p>
+            3 month subscription
+            <br>
+            price 20£ /month
+        </p>
+        <button (click)="subscribeThreeMonths()">subscribe</button>
+    </div>
+    <div class="subscription green">
+        <img src="">
+        <div class="info">
+            <span class="title">6 Months Subscription</span>
+            <hr>
+            <span class="cost">15£ / month</span>
+        </div>
+        <p>
+            6 month subscription
+            <br>
+            price 15£ /month
+
+        </p>
+        <button (click)="subscribeSixMonths()">subscribe</button>
+    </div>
+    <div class="subscription black">
+        <img src="">
+        <div class="info">
+            <span class="title">1 Year Subscription</span>
+            <hr>
+            <span class="cost">10£ / month</span>
+        </div>
+        <p>
+            12 month subscription
+            <br>
+            price 10£ /month
+        </p>
         <button (click)="subscribeOneYear()">subscribe</button>
     </div>
 </div>

@@ -23,7 +23,7 @@ export class ProfileComponent implements OnInit {
 
   getProf(){
     const url = 'http://localhost:8080/prof?id=';
-    this.http.get<any>( url +4, {})
+    this.http.get<any>( url +1, {})
       .subscribe({
         next: data => {
           console.log(data.id)

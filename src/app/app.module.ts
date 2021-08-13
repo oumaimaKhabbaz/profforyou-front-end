@@ -73,6 +73,8 @@ import { FieldErrorDisplayComponent } from './field-error-display/field-error-di
 import { MessagesComponent } from './messages/messages.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ProfileComponent } from './profile/profile.component';
+import { StudentsProfileComponent } from './students-profile/students-profile.component';
+import { TutorsAdComponent } from './tutors-ad/tutors-ad.component';
 
 
 
@@ -99,7 +101,9 @@ import { ProfileComponent } from './profile/profile.component';
     MessagesComponent,
 
     SubscriptionComponent,
-    ProfileComponent
+    ProfileComponent,
+    StudentsProfileComponent,
+    TutorsAdComponent
 
   ],
   imports: [

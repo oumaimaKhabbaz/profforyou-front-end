@@ -1,0 +1,72 @@
+<div class="navbar-room"></div>
+<ng-container *ngIf="ads.length>0">
+    <h1 class="active-ads-title" >Active Ads</h1>
+<div class="active-ads">
+    <div class="ad" *ngFor="let ad of ads">
+        <div class="ad-img">
+            <img src="{{ad.src}}">
+        </div>
+        <div class="info">
+            <div class="title">
+            {{ad.title}}
+            <!-- <div class="form-control-feedback"
+            *ngIf = "title.errors && (title.dirty || title.touched)">
+        
+            <p *ngIf="title.errors.required">Email is required</p>
+            <p *ngIf="title.errors.pattern"> The email address must contain at least the @ character</p> -->
+            
+
+            </div>
+            <div class="description">
+           {{ad.description}}
+    
+            </div>
+            <div class="cost">
+            £{{ad.cost}}/month
+    
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<hr>
+</ng-container>
+
+
+<div class="create-ctn">
+    <h1>CREATE A NEW AD</h1>
+    <div>
+        <label for="ad-img">
+            Image:
+        </label>
+        <input type="file" name="ad-img ">
+        <img id="preview" src="">
+    </div>
+    <div class="field">
+        <label for="title">
+            Title:
+        </label>
+        <input #title type="text" name="title ">
+    </div>
+
+    <div class="field">
+        <label for="description">
+            Description:
+        </label>
+        <textarea #description placeholder="add here the description for your ad ..." name="description "> </textarea>
+           
+    </div>
+
+    <div class="field">
+        <label for="cost">
+           Cost(£):
+        </label>
+
+        <input #cost type="number" name="cost ">
+    </div>
+
+
+    <button (click)="createAd(title, description, cost)"> Create</button>
+
+</div>
