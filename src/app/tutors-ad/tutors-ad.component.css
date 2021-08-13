@@ -16,8 +16,13 @@
     border-radius:15px ;
     overflow: hidden;
     width: 500px;
-    background-color: rgb(230, 225, 225);
+    background-color: rgb(238, 238, 238);
 }
+
+.ad:not(:first-child) {
+    margin-left: 40px;
+}
+
 .ad .info{
     display:inherit;
     flex-direction: column;
@@ -25,16 +30,16 @@
 }
 .ad .info> *:not(:last-child){
 
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
-.ad-img{
+/* .ad-img{
     width:100%;
     
 }
 .ad-img> img{
     height: 200px;
-}
+} */
  .cost{
      width:100%;
      text-align: center;
@@ -42,16 +47,27 @@
      font-size: large;
  }
 
-
-.description{
-
-}
  .title{
     text-align: center;
     width:100%;
     font-weight: 700;
     font-size: large; 
  }
+
+ .lesson-type {
+    text-align: center;
+ }
+
+ .lesson-type__label {
+    color: rgb(66, 66, 66);
+ }
+
+ .lesson-type__type {
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+
+ }
+
   .create-ctn{
       display: flex;
       flex-direction: column;
@@ -92,6 +108,3 @@
     cursor: pointer;
     font-weight: 600;
 }
-
-
- 

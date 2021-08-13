@@ -3,9 +3,9 @@
     <h1 class="active-ads-title" >Active Ads</h1>
 <div class="active-ads">
     <div class="ad" *ngFor="let ad of ads">
-        <div class="ad-img">
+        <!-- <div class="ad-img">
             <img src="{{ad.src}}">
-        </div>
+        </div> -->
         <div class="info">
             <div class="title">
             {{ad.title}}
@@ -25,6 +25,9 @@
             £{{ad.cost}}/month
     
             </div>
+            <div class="lesson-type">
+                <span class="lesson-type_label">Type of lesson: </span> <span class="lesson-type_type">{{ad.type}}</span>
+            </div>
         </div>
 
         
@@ -36,13 +39,13 @@
 
 <div class="create-ctn">
     <h1>CREATE A NEW AD</h1>
-    <div>
+    <!-- <div>
         <label for="ad-img">
             Image:
         </label>
         <input type="file" name="ad-img ">
         <img id="preview" src="">
-    </div>
+    </div> -->
     <div class="field">
         <label for="title">
             Title:
@@ -66,7 +69,27 @@
         <input #cost type="number" name="cost ">
     </div>
 
+    <div class="field">
+        <label for="type">
+           Lesson type:
+        </label>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Lesson type</mat-label>
+            <mat-select #lessonType>
+                <mat-option value="face-to-face">face to face</mat-option>
+                <mat-option value="remote">remote</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- <mat-form-field appearance="fill">
+          <select matNativeControl required name="type" #lessonType>
+            <option value="face-to-face">face to face</option>
+            <option value="remote">remote</option>
+          </select>
+        </mat-form-field> -->
+    </div>
 
-    <button (click)="createAd(title, description, cost)"> Create</button>
+
+    <button (click)="createAd(title, description, cost, lessonType)"> Create</button>
 
 </div>

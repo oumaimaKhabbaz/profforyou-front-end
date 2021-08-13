@@ -1,0 +1,135 @@
+.student-ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.student-ctn .box {
+    background-color: rgb(216, 216, 216);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    width: 300px;
+    /* height: 350px; */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+input {
+    height: 50px;
+    width: 100%;
+    border: solid 1px rgb(211, 211, 211);
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: #696969;
+}
+
+.student-ctn > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.info > .section-title {
+    width: 100%;
+    text-align: center;
+}
+
+.photo-ctn {
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.photo {
+    /* width: 80%; */
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-input {
+    display: none;
+}
+
+.student-btn {
+    padding: 20px;
+    color: #fff;
+    background-color: #b30000;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.student-btn:hover {
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.student-btn:disabled {
+    color: rgb(212, 212, 212);
+    background-color: #696969;
+    cursor: not-allowed;
+}
+
+input {
+    height: 50px;
+    width: 100%;
+    border: solid 1px rgb(211, 211, 211);
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: #696969;
+}
+
+/* ::ng-deep .mat-select-content{
+    width:2000px;
+    background-color: red;
+    font-size: 10px;   
+} */
+
+[class^="mat-form-field"] {
+    width: 100%;
+}
+
+/* .mat-form-field-flex {
+    background: transparent;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+} */

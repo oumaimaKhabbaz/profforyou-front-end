@@ -1,4 +1,3 @@
-
 <div class="login" id="mat-dialog">
   <!-- <div class="login-triangle"></div> -->
   <h2 class="login-header">Sign-up</h2>
@@ -38,6 +37,11 @@
         <app-field-error-display [displayError]="isFieldValid('password')" errorMsg="Please inform your password">
         </app-field-error-display>
       </div>
+    </div>
+
+    <div class="form-group is-tutor">
+      <label for="is-tutor">Registering as a tutor</label>
+      <input type="checkbox">
     </div>
 
     <button type="submit" class="submit-btn" [disabled]="!form.valid">

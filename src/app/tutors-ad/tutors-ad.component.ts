@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
+import { Ad } from './tutors-ad.interface';
 @Component({
   selector: 'app-tutors-ad',
   templateUrl: './tutors-ad.component.html',
@@ -7,12 +9,12 @@ import { Validators, FormControl } from '@angular/forms';
 })
 export class TutorsAdComponent implements OnInit {
  
-  ads =[
+  ads: Ad[] = [
     {
-      src: "", 
       title: "Expert in React.js",
       description: "Hello my name is oumaima, I'm a grad student and I'm expert in CSS, Html if you want to reach me and hgkjkjhd hfcyf hgvcqhvjhc",
-      cost:"15"
+      cost: "15",
+      type: "remote"
     }
   ]
   
@@ -39,16 +41,17 @@ export class TutorsAdComponent implements OnInit {
     }
   }
   
-  createAd(title:any, description:any, cost:any){
-   const newAd ={ 
-     src:"",
+  createAd(title:any, description:any, cost:any, type:any){
+   const newAd: Ad ={ 
      title: title.value,
      description: description.value,
-     cost: cost.value
+     cost: cost.value,
+     type: type.value
    }
    title.value = ""
    description.value=""
    cost.value=""
+   type.value=""
    this.ads.push(newAd)
   }
 

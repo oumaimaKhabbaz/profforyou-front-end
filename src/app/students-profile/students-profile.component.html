@@ -1,55 +1,59 @@
-<div></div>
-<!-- <div class="navbar-room"></div>
-<ng-container *ngIf="ads.length>0">
-    <h1 class="active-ads-title">Active Ads</h1>
-    <div class="active-ads">
-        <div class="ad" *ngFor="let ad of ads">
-            <div class="ad-img">
-                <img src="{{ad.src}}">
+<div class="navbar-room"></div>
+
+<div class="student-ctn">
+    
+    <div class="info box">
+        <div class="section-title">General Information ℹ️</div>
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName">
+        
+        <label for="secondName">Last Name:</label>
+        <input type="text" name="secondName">
+
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" name="birthday">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" (keydown)="filterPhone($event)">
+
+        <label for="address">Address:</label>
+        <input type="text" name="address">
+
+        <label>Gender:</label>
+        <mat-form-field appearance="fill">
+            <mat-select>
+                <mat-option value="Male">
+                    Male
+                </mat-option>
+                <mat-option value="Female">
+                    Female
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <div class="box">
+            <div class="section-title">Profile photo 📷</div>
+            <div class="photo-ctn">
+                <img class="photo" src="/assets/avatar.png" alt="avatar">
             </div>
-            <div class="info">
-                <div class="old-Password">
-                    {{ad.old-Password}}
-                </div>
-                <div class="new-Password">
-                    {{ad.new-password}}
-
-                </div>
-               
-            </div>
-
-
+            <input class="photo-input" #photoInput type="file" (change)="uploadPhoto(photoInput)">
+            <button class="student-btn" (click)="photoInput.click()">Upload</button>
+        </div>
+        <div class="password box">
+            <div class="section-title">Change password 🔒</div>
+            <input type="password" placeholder="Old Password" #oldPass (keyup)="updateCanChangePassword(oldPass, newPass1, newPass2)">
+            <input type="password" placeholder="New Password" #newPass1 (keyup)="updateCanChangePassword(oldPass, newPass1, newPass2)">
+            <input type="password" placeholder="New Password" #newPass2 (keyup)="updateCanChangePassword(oldPass, newPass1, newPass2)">
+            <output>{{errorMessage}}</output>
+            <button class="student-btn"
+                    [disabled]="errorMessage !== ''"
+            >
+                Change password
+            </button>
         </div>
     </div>
-    <hr>
-</ng-container>
-
-
-<div class="create-ctn">
-    <h1>My Account</h1>
-    <div>
-        <label for="ad-img">
-            Profile Photo:
-        </label>
-        <input type="file" name="ad-img ">
-        <img id="preview" src="">
-    </div>
-    <h2>Change password</h2>
-    <div class="field">
-        <label for="old">
-            old Password:
-        </label>
-        <input #title type="text" name="old ">
-    </div>
-
-    <div class="field">
-        <label for="New">
-            New pasword":
-        </label>
-    </div>
-
-
-
-    <button (click)="changePassword(old, new)"> Create</button>
-
-</div> -->
+</div>

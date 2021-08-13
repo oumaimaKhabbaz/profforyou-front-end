@@ -17,6 +17,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TutorsAdComponent } from './tutors-ad/tutors-ad.component';
+import { StudentsProfileComponent } from './students-profile/students-profile.component';
 
 
 
@@ -106,6 +107,10 @@ const routes: Routes = [
   {
     path: 'ad',
     component: TutorsAdComponent
+  },
+  {
+    path:'student-profile',
+    component:StudentsProfileComponent
   }
 
   
